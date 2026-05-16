@@ -1,0 +1,178 @@
+// ========================================
+// Veer Teja Electronics - Prisma Schema
+// ========================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// ============ ADMIN AUTH ============
+model Admin {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  role         AdminRole @default(EDITOR)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+enum AdminRole {
+  SUPER_ADMIN
+  EDITOR
+}
+
+// ============ CATEGORIES ============
+model Category {
+  id          String    @id @default(cuid())
+  name        String    // Hindi name
+  nameEn      String    // English name
+  slug        String    @unique
+  icon        String    // emoji or icon name
+  imageUrl    String?
+  description String?
+  sortOrder   Int       @default(0)
+  isActive    Boolean   @default(true)
+  products    Product[]
+  services    Service[]
+  createdAt   DateTime  @default(now())
+}
+
+// ============ PRODUCTS ============
+model Product {
+  id            String      @id @default(cuid())
+  name          String
+  nameHi        String      // Hindi name
+  slug          String      @unique
+  description   String?
+  descriptionHi String?
+  price         Float?
+  mrp           Float?
+  discount      Float?      // percentage
+  images        String     // JSON string of image URLs
+  brand         String?
+  model         String?
+  inStock       Boolean     @default(true)
+  isWholesale   Boolean     @default(false)
+  isFeatured    Boolean     @default(false)
+  isActive      Boolean     @default(true)
+  rating        Float       @default(0)
+  reviewCount   Int         @default(0)
+  categoryId    String
+  category      Category    @relation(fields: [categoryId], references: [id])
+  tags          String     // JSON string of tags
+  specifications Json?      // key-value pairs
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+// ============ SERVICES (REPAIR) ============
+model Service {
+  id            String    @id @default(cuid())
+  name          String
+  nameHi        String
+  slug          String    @unique
+  description   String?
+  descriptionHi String?
+  price         Float?    // starting price
+  duration      String?   // "Same Day", "1-2 Days"
+  imageUrl      String?
+  icon          String?   // emoji
+  isActive      Boolean   @default(true)
+  isFeatured    Boolean   @default(false)
+  categoryId    String?
+  category      Category? @relation(fields: [categoryId], references: [id])
+  bookings      Booking[]
+  createdAt     DateTime  @default(now())
+}
+
+// ============ REPAIR BOOKINGS ============
+model Booking {
+  id           String        @id @default(cuid())
+  bookingNo    String        @unique @default(cuid()) // human-readable
+  customerName String
+  phone        String
+  address      String?
+  serviceId    String
+  service      Service       @relation(fields: [serviceId], references: [id])
+  deviceBrand  String?
+  deviceModel  String?
+  issueDesc    String
+  preferredDate DateTime?
+  status       BookingStatus @default(PENDING)
+  adminNotes   String?
+  estimatedCost Float?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+// ============ ENQUIRIES ============
+model Enquiry {
+  id        String        @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  message   String
+  source    String?       // which page
+  isRead    Boolean       @default(false)
+  createdAt DateTime      @default(now())
+}
+
+// ============ TESTIMONIALS ============
+model Testimonial {
+  id         String   @id @default(cuid())
+  name       String
+  location   String?
+  review     String
+  reviewHi   String?
+  rating     Int      @default(5)
+  imageUrl   String?
+  isActive   Boolean  @default(true)
+  isFeatured Boolean  @default(false)
+  createdAt  DateTime @default(now())
+}
+
+// ============ OFFERS / BANNERS ============
+model Banner {
+  id          String   @id @default(cuid())
+  title       String
+  titleHi     String?
+  subtitle    String?
+  imageUrl    String
+  link        String?
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  expiresAt   DateTime?
+  createdAt   DateTime @default(now())
+}
+
+// ============ GALLERY ============
+model GalleryImage {
+  id          String   @id @default(cuid())
+  imageUrl    String
+  caption     String?
+  captionHi   String?
+  category    String?  // "shop", "repair", "products"
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+// ============ SITE SETTINGS ============
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
