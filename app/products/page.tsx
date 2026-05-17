@@ -4,25 +4,43 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Star, Filter, X, Grid, List, ChevronDown } from 'lucide-react';
+import { Star, Filter, X, Grid, List, ChevronDown, Heart } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import BackToTop from '@/components/shared/BackToTop';
+import WishlistButton from '@/components/shared/WishlistButton';
 import { PRODUCTS, CATEGORIES } from '@/lib/data';
+import { useWishlistStore } from '@/lib/store';
 
 function ProductsContent() {
   const searchParams = useSearchParams();
   const categorySlug = searchParams.get('category');
+  const searchQuery = searchParams.get('search') || '';
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categorySlug);
   const [sortBy, setSortBy] = useState('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
 
+  const { isInWishlist } = useWishlistStore();
+
   const filteredProducts = PRODUCTS.filter(product => {
-    if (!selectedCategory) return true;
-    const category = CATEGORIES.find(c => c.slug === selectedCategory);
-    return category && product.categoryId === category.id;
+    // Filter by category
+    if (selectedCategory) {
+      const category = CATEGORIES.find(c => c.slug === selectedCategory);
+      if (!category || product.categoryId !== category.id) return false;
+    }
+    // Filter by search query
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      return (
+        product.name.toLowerCase().includes(query) ||
+        product.nameHi.includes(searchQuery) ||
+        product.brand?.toLowerCase().includes(query)
+      );
+    }
+    return true;
   });
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
@@ -63,11 +81,16 @@ function ProductsContent() {
           <div className="mb-8">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               <span className="hindi-text">
-                {currentCategory ? currentCategory.name : 'सभी उत्पाद'}
+                {searchQuery ? `Search: "${searchQuery}"` : currentCategory ? currentCategory.name : 'सभी उत्पाद'}
               </span>
             </h1>
             <p className="text-gray-500">
               {sortedProducts.length} उत्पाद मिले
+              {searchQuery && (
+                <Link href="/products" className="ml-2 text-primary hover:underline">
+                  (Clear search)
+                </Link>
+              )}
             </p>
           </div>
 
@@ -193,6 +216,10 @@ function ProductsContent() {
                               {product.discount}% OFF
                             </span>
                           )}
+                          {/* Wishlist Button */}
+                          <div className="absolute top-2 right-2">
+                            <WishlistButton product={product} size="sm" />
+                          </div>
                         </div>
                       </Link>
 
@@ -260,6 +287,7 @@ function ProductsContent() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }

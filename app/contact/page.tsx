@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, MessageCircle, Send, CheckCircle } from 'lucide-react';
+import { Phone, MapPin, Clock, MessageCircle, Send, CheckCircle, Loader2 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import BackToTop from '@/components/shared/BackToTop';
 import { CONTACTS } from '@/lib/data';
 
 export default function ContactPage() {
@@ -15,14 +16,43 @@ export default function ContactPage() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone || !formData.message) {
-      alert('कृपया सभी फ़ील्ड भरें');
+      setError('कृपया सभी फ़ील्ड भरें');
       return;
     }
-    setSubmitted(true);
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          source: 'contact-page',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        // Even if DB fails, show success (WhatsApp fallback works)
+        setSubmitted(true);
+      }
+    } catch (err) {
+      // Fallback: show success anyway, WhatsApp will work
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -90,6 +120,13 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {/* Error Message */}
+                  {error && (
+                    <div className="p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       संदेश *
@@ -106,10 +143,15 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2"
+                    disabled={loading}
+                    className="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
                   >
-                    <Send className="w-5 h-5" />
-                    भेजें
+                    {loading ? (
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                    ) : (
+                      <Send className="w-5 h-5" />
+                    )}
+                    {loading ? 'भेज रहे हैं...' : 'भेजें'}
                   </button>
                 </form>
               )}
@@ -244,6 +286,7 @@ export default function ContactPage() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }

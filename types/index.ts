@@ -1,7 +1,139 @@
-import type { Admin, Category, Product, Service, Booking, Enquiry, Testimonial, Banner, GalleryImage, SiteSetting } from '@prisma/client';
+// ============ Mock Types (no Prisma dependency) ============
 
-// Extend Prisma types with custom fields
-export type { Admin, Category, Product, Service, Booking, Enquiry, Testimonial, Banner, GalleryImage, SiteSetting };
+// Basic types for the application
+export interface Admin {
+  id: string;
+  email: string;
+  name: string;
+  role: string;
+  createdAt: Date;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  nameEn: string;
+  slug: string;
+  icon: string;
+  imageUrl?: string;
+  description?: string;
+  sortOrder: number;
+  isActive: boolean;
+  createdAt: Date;
+}
+
+export interface Product {
+  id: string;
+  name: string;
+  nameHi: string;
+  slug: string;
+  description?: string;
+  descriptionHi?: string;
+  price?: number;
+  mrp?: number;
+  discount?: number;
+  images: string[];
+  brand?: string;
+  model?: string;
+  inStock: boolean;
+  isWholesale: boolean;
+  isFeatured: boolean;
+  isActive: boolean;
+  rating: number;
+  reviewCount: number;
+  categoryId: string;
+  tags: string[];
+  specifications?: Record<string, string>;
+  createdAt: Date;
+}
+
+export interface Service {
+  id: string;
+  name: string;
+  nameHi: string;
+  slug: string;
+  description?: string;
+  descriptionHi?: string;
+  price?: number;
+  duration?: string;
+  imageUrl?: string;
+  icon?: string;
+  isActive: boolean;
+  isFeatured: boolean;
+  categoryId?: string;
+  createdAt: Date;
+}
+
+export interface Booking {
+  id: string;
+  bookingNo: string;
+  customerName: string;
+  phone: string;
+  address?: string;
+  serviceId: string;
+  deviceBrand?: string;
+  deviceModel?: string;
+  issueDesc: string;
+  preferredDate?: Date;
+  status: string;
+  adminNotes?: string;
+  estimatedCost?: number;
+  createdAt: Date;
+}
+
+export interface Enquiry {
+  id: string;
+  name: string;
+  phone: string;
+  email?: string;
+  message: string;
+  source?: string;
+  isRead: boolean;
+  createdAt: Date;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  location?: string;
+  review: string;
+  reviewHi?: string;
+  rating: number;
+  imageUrl?: string;
+  isActive: boolean;
+  isFeatured: boolean;
+  createdAt: Date;
+}
+
+export interface Banner {
+  id: string;
+  title: string;
+  titleHi?: string;
+  subtitle?: string;
+  imageUrl: string;
+  link?: string;
+  isActive: boolean;
+  sortOrder: number;
+  expiresAt?: Date;
+  createdAt: Date;
+}
+
+export interface GalleryImage {
+  id: string;
+  imageUrl: string;
+  caption?: string;
+  captionHi?: string;
+  category?: string;
+  isActive: boolean;
+  createdAt: Date;
+}
+
+export interface SiteSetting {
+  id: string;
+  key: string;
+  value: string;
+  updatedAt: Date;
+}
 
 // ============ Custom Types ============
 

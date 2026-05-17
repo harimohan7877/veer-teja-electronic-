@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Phone, User, MapPin, MessageCircle, Wrench, CheckCircle } from 'lucide-react';
+import { Calendar, Phone, User, MapPin, MessageCircle, Wrench, CheckCircle, Loader2 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import BackToTop from '@/components/shared/BackToTop';
 import { SERVICES } from '@/lib/data';
 
 export default function BookingPage() {
@@ -20,16 +21,31 @@ export default function BookingPage() {
     preferredDate: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone || !formData.serviceId || !formData.issueDesc) {
       alert('कृपया आवश्यक फ़ील्ड भरें');
       return;
     }
+
+    setLoading(true);
+
+    // Save to database (try)
+    try {
+      await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+    } catch (err) {
+      // Ignore DB errors, WhatsApp will work as fallback
+    }
+
     setSubmitted(true);
 
-    // Send to WhatsApp
+    // Always send to WhatsApp as primary
     const service = SERVICES.find(s => s.id === formData.serviceId);
     const message = encodeURIComponent(
       `🔧 *नई बुकिंग अनुरोध*\n\n` +
@@ -44,6 +60,7 @@ export default function BookingPage() {
       `कृपया इस बुकिंग को कन्फर्म करें।`
     );
     window.open(`https://wa.me/919928330252?text=${message}`, '_blank');
+    setLoading(false);
   };
 
   return (
@@ -233,10 +250,15 @@ export default function BookingPage() {
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2"
+                disabled={loading}
+                className="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
               >
-                <MessageCircle className="w-5 h-5" />
-                बुकिंग भेजें
+                {loading ? (
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                ) : (
+                  <MessageCircle className="w-5 h-5" />
+                )}
+                {loading ? 'भेज रहे हैं...' : 'बुकिंग भेजें'}
               </button>
 
               <p className="text-center text-sm text-gray-500">
@@ -279,6 +301,7 @@ export default function BookingPage() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }

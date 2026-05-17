@@ -2,8 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, MessageCircle, Moon, Sun, Search, ShoppingCart, User } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle, Moon, Sun, Search, ShoppingCart, User, Heart } from 'lucide-react';
+import { PRODUCTS } from '@/lib/data';
+import CartButton from '@/components/shared/CartButton';
+import { useWishlistStore } from '@/lib/store';
+
+// Wishlist count badge component
+function WishlistCount() {
+  const { items } = useWishlistStore();
+  if (items.length === 0) return null;
+  return (
+    <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
+      {items.length}
+    </span>
+  );
+}
 
 const navLinks = [
   { label: 'Home', labelHi: 'होम', href: '/' },
@@ -16,11 +31,21 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSearchResults, setShowSearchResults] = useState(false);
 
   useEffect(() => {
+    // Check for saved dark mode preference
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode === 'true') {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark');
+    }
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -28,9 +53,33 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Search functionality
+  const searchResults = searchQuery.length > 2
+    ? PRODUCTS.filter(p =>
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.nameHi.includes(searchQuery) ||
+        p.brand?.toLowerCase().includes(searchQuery.toLowerCase())
+      ).slice(0, 5)
+    : [];
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
+      setShowSearchResults(false);
+    }
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setShowSearchResults(value.length > 2);
+  };
+
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark', !darkMode);
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    document.documentElement.classList.toggle('dark', newMode);
+    localStorage.setItem('darkMode', String(newMode));
   };
 
   return (
@@ -67,17 +116,49 @@ export default function Navbar() {
           </Link>
 
           {/* Search Bar - Desktop */}
-          <div className="hidden lg:flex flex-1 max-w-md mx-8">
-            <div className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search products, services..."
-                className="w-full pl-4 pr-12 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary dark:bg-gray-800 dark:text-white"
-              />
-              <button className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors">
-                <Search className="w-4 h-4" />
-              </button>
-            </div>
+          <div className="hidden lg:flex flex-1 max-w-md mx-8 relative">
+            <form onSubmit={handleSearch} className="w-full">
+              <div className="relative w-full">
+                <input
+                  type="text"
+                  placeholder="Search products, services..."
+                  value={searchQuery}
+                  onChange={(e) => handleSearchChange(e.target.value)}
+                  onFocus={() => setShowSearchResults(searchQuery.length > 2)}
+                  onBlur={() => setTimeout(() => setShowSearchResults(false), 200)}
+                  className="w-full pl-4 pr-12 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary dark:bg-gray-800 dark:text-white"
+                />
+                <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors">
+                  <Search className="w-4 h-4" />
+                </button>
+              </div>
+            </form>
+            {/* Search Results Dropdown */}
+            {showSearchResults && searchResults.length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 z-50">
+                {searchResults.map(product => (
+                  <Link
+                    key={product.id}
+                    href={`/products/${product.slug}`}
+                    onClick={() => { setShowSearchResults(false); setSearchQuery(''); }}
+                    className="flex items-center gap-3 p-3 hover:bg-gray-50 dark:hover:bg-gray-700 border-b last:border-0"
+                  >
+                    <img src={product.images[0]} alt={product.name} className="w-10 h-10 object-cover rounded" />
+                    <div>
+                      <p className="font-medium text-gray-900 dark:text-white text-sm">{product.nameHi}</p>
+                      <p className="text-xs text-gray-500">{product.brand} - ₹{product.price?.toLocaleString()}</p>
+                    </div>
+                  </Link>
+                ))}
+                <Link
+                  href={`/products?search=${encodeURIComponent(searchQuery)}`}
+                  onClick={() => { setShowSearchResults(false); setSearchQuery(''); }}
+                  className="block p-3 text-center text-primary hover:bg-gray-50 dark:hover:bg-gray-700 text-sm font-medium"
+                >
+                  View all results →
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Desktop Navigation */}
@@ -96,13 +177,28 @@ export default function Navbar() {
           </div>
 
           {/* Action Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2">
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700"
+              title={darkMode ? 'Light Mode' : 'Dark Mode'}
             >
-              {darkMode ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-gray-600" />}
+              {darkMode ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-gray-700" />}
             </button>
+
+            {/* Wishlist Button */}
+            <Link
+              href="/wishlist"
+              className="relative p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700"
+              title="Wishlist"
+            >
+              <Heart className="w-5 h-5 text-gray-700 dark:text-gray-200" />
+              <WishlistCount />
+            </Link>
+
+            {/* Cart Button */}
+            <CartButton />
+
             <Link
               href="tel:9928330252"
               className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -142,16 +238,18 @@ export default function Navbar() {
           >
             <div className="px-4 py-4 space-y-3">
               {/* Mobile Search */}
-              <div className="relative mb-4">
+              <form onSubmit={(e) => { e.preventDefault(); if(searchQuery.trim()) { router.push(`/products?search=${encodeURIComponent(searchQuery)}`); setIsOpen(false); }}} className="relative mb-4">
                 <input
                   type="text"
-                  placeholder="Search..."
-                  className="w-full pl-4 pr-12 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary dark:bg-gray-800"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-4 pr-12 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary dark:bg-gray-800 dark:text-white"
                 />
-                <button className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 bg-primary text-white rounded-md">
+                <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 bg-primary text-white rounded-md">
                   <Search className="w-4 h-4" />
                 </button>
-              </div>
+              </form>
 
               {navLinks.map((link) => (
                 <Link

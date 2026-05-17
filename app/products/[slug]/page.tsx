@@ -5,9 +5,14 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Star, Heart, Share2, Truck, ShieldCheck, RefreshCw, Check, X, ChevronRight, Phone } from 'lucide-react';
+import WishlistButton from '@/components/shared/WishlistButton';
+import { useCartStore } from '@/lib/store';
+import { ShoppingCart } from 'lucide-react';
+import { Product } from '@/types';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import BackToTop from '@/components/shared/BackToTop';
 import { PRODUCTS, CATEGORIES } from '@/lib/data';
 
 export default function ProductDetailPage() {
@@ -17,6 +22,23 @@ export default function ProductDetailPage() {
   const product = PRODUCTS.find(p => p.slug === slug);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const { addItem } = useCartStore();
+
+  const handleAddToCart = () => {
+    if (product) {
+      // Cast to Product type with required fields
+      const productWithDefaults = {
+        ...product,
+        isActive: true,
+        isWholesale: false,
+        tags: [] as string[],
+        specifications: undefined,
+        createdAt: new Date(),
+      } as Product;
+      addItem(productWithDefaults, quantity);
+      alert('Added to cart!');
+    }
+  };
 
   if (!product) {
     return (
@@ -113,11 +135,25 @@ export default function ProductDetailPage() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <button className="flex-1 flex items-center justify-center gap-2 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                    <Heart className="w-5 h-5" />
-                    <span>Wishlist</span>
-                  </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div className="flex-1">
+                    <WishlistButton product={product} showLabel />
+                  </div>
+                  <button
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator.share({
+                          title: product.nameHi,
+                          text: `Check out ${product.nameHi} - ₹${product.price}`,
+                          url: window.location.href,
+                        });
+                      } else {
+                        // Fallback: copy to clipboard
+                        navigator.clipboard.writeText(window.location.href);
+                        alert('Link copied to clipboard!');
+                      }
+                    }}
+                    className="flex-1 flex items-center justify-center gap-2 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
                     <Share2 className="w-5 h-5" />
                     <span>Share</span>
                   </button>
@@ -218,6 +254,13 @@ export default function ProductDetailPage() {
                   </div>
 
                   <div className="flex gap-3">
+                    <button
+                      onClick={handleAddToCart}
+                      className="flex-1 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                    >
+                      <ShoppingCart className="w-5 h-5" />
+                      Add to Cart
+                    </button>
                     <button
                       onClick={handleEnquiry}
                       className="flex-1 py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors"
@@ -340,6 +383,7 @@ export default function ProductDetailPage() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }

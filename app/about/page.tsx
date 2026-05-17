@@ -5,6 +5,7 @@ import { MapPin, Phone, Clock, Award, Users, Wrench, Star } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import BackToTop from '@/components/shared/BackToTop';
 import { STATS, CONTACTS } from '@/lib/data';
 
 export default function AboutPage() {
@@ -198,6 +199,7 @@ export default function AboutPage() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }

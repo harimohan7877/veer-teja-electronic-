@@ -6,6 +6,7 @@ import { Image as ImageIcon, Grid, Camera, Store, Wrench, Users } from 'lucide-r
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import BackToTop from '@/components/shared/BackToTop';
 
 const GALLERY_IMAGES = [
   { id: 1, category: 'shop', src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop', caption: 'हमारी दुकान', captionHi: 'Our Shop' },
@@ -144,6 +145,7 @@ export default function GalleryPage() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }

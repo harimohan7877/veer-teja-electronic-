@@ -6,6 +6,7 @@ import { Clock, CheckCircle, Phone, Calendar, ArrowRight, Wrench, Snowflake, Fan
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import BackToTop from '@/components/shared/BackToTop';
 import { SERVICES } from '@/lib/data';
 
 export default function ServicesPage() {
@@ -148,6 +149,7 @@ export default function ServicesPage() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }
