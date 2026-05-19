@@ -122,33 +122,33 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Content - Feature Cards */}
+          {/* Right Content - 2026 Bento Grid */}
           <motion.div
             key={`card-${currentSlide}`}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="hidden lg:grid grid-cols-2 gap-4"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3, type: "spring", stiffness: 100 }}
+            className="hidden lg:grid grid-cols-2 grid-rows-2 gap-4 h-[400px]"
           >
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">🔧</div>
-              <h3 className="text-white font-bold text-lg mb-1 hindi-text">मरम्मत सेवाएं</h3>
-              <p className="text-gray-300 text-sm">कूलर, पंखा, फ्रिज, वाशिंग मशीन</p>
+            <div className="col-span-1 row-span-2 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.3)] flex flex-col justify-between hover:scale-[1.02] hover:bg-white/10 transition-all duration-300">
+              <div className="text-5xl mb-4 bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center shadow-inner">🔧</div>
+              <div>
+                <h3 className="text-white font-bold text-2xl mb-2 hindi-text">मरम्मत सेवाएं</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">कूलर, पंखा, फ्रिज, वाशिंग मशीन की घर बैठे मरम्मत।</p>
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">🛒</div>
-              <h3 className="text-white font-bold text-lg mb-1 hindi-text">बिक्री</h3>
-              <p className="text-gray-300 text-sm">इन्वेर्टर, बैटरी, लाईट, पानी फिटिंग</p>
+            <div className="col-span-1 row-span-1 bg-gradient-to-br from-primary/80 to-primary/40 backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-lg flex flex-col justify-center hover:scale-[1.02] hover:shadow-primary/50 transition-all duration-300 group overflow-hidden relative">
+              <div className="absolute -right-4 -top-4 w-24 h-24 bg-white/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="text-3xl mb-2 relative z-10">🛒</div>
+              <h3 className="text-white font-bold text-lg mb-1 hindi-text relative z-10">बिक्री</h3>
+              <p className="text-gray-100 text-xs relative z-10">इन्वेर्टर, बैटरी, लाईट</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">📦</div>
-              <h3 className="text-white font-bold text-lg mb-1 hindi-text">थोक व खुदरा</h3>
-              <p className="text-gray-300 text-sm">सभी ब्रांड उपलब्ध</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">🏠</div>
-              <h3 className="text-white font-bold text-lg mb-1 hindi-text">घर पर सेवा</h3>
-              <p className="text-gray-300 text-sm">फ्री विजिट, तेज सर्विस</p>
+            <div className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 shadow-lg flex items-center gap-4 hover:scale-[1.02] hover:bg-white/10 transition-all duration-300">
+              <div className="text-4xl bg-white/10 p-3 rounded-xl shadow-inner">🏠</div>
+              <div>
+                <h3 className="text-white font-bold text-lg mb-1 hindi-text">घर पर सेवा</h3>
+                <p className="text-gray-300 text-xs">फ्री विजिट, तेज सर्विस</p>
+              </div>
             </div>
           </motion.div>
         </div>

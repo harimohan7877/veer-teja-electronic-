@@ -6,17 +6,17 @@
 // when database is properly configured
 export const prisma = {
   enquiry: {
-    create: async (data: any) => ({ id: 'mock', ...data }),
+    create: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
     findMany: async () => [],
   },
   booking: {
-    create: async (data: any) => ({ id: 'mock', ...data }),
+    create: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
     findMany: async () => [],
   },
   product: {
-    create: async (data: any) => ({ id: 'mock', ...data }),
+    create: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
     findMany: async () => [],
-    update: async (data: any) => ({ id: 'mock', ...data }),
+    update: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
     delete: async () => ({}),
   },
 };

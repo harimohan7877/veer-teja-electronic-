@@ -199,83 +199,86 @@ function ProductsContent() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
-                      className={`bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 ${
+                      className={`group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100/80 hover:border-primary/30 ${
                         viewMode === 'list' ? 'flex' : ''
                       }`}
                     >
                       {/* Image */}
-                      <Link href={`/products/${product.slug}`} className={`block ${viewMode === 'list' ? 'w-48 flex-shrink-0' : ''}`}>
-                        <div className={`relative ${viewMode === 'list' ? 'h-full' : 'h-48'}`}>
+                      <Link href={`/products/${product.slug}`} className={`block overflow-hidden relative ${viewMode === 'list' ? 'w-56 flex-shrink-0 border-r border-gray-100' : ''}`}>
+                        <div className={`relative bg-gray-50/50 ${viewMode === 'list' ? 'h-full' : 'h-52'}`}>
+                          <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                           <img
                             src={product.images[0] || 'https://via.placeholder.com/400x300?text=Product'}
                             alt={product.name}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                           />
                           {product.discount && product.discount >= 20 && (
-                            <span className="absolute top-2 left-2 px-2 py-0.5 bg-red-600 text-white text-xs font-bold rounded">
+                            <span className="absolute top-3 left-3 px-2.5 py-1 bg-gradient-to-r from-red-600 to-rose-500 text-white text-xs font-bold rounded-full shadow-lg z-20">
                               {product.discount}% OFF
                             </span>
                           )}
                           {/* Wishlist Button */}
-                          <div className="absolute top-2 right-2">
+                          <div className="absolute top-3 right-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <WishlistButton product={product} size="sm" />
                           </div>
                         </div>
                       </Link>
 
                       {/* Content */}
-                      <div className="p-4 flex-1">
-                        <p className="text-xs text-gray-500 mb-1">{product.brand}</p>
+                      <div className="p-5 flex-1 flex flex-col">
+                        <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-1">{product.brand}</p>
                         <Link href={`/products/${product.slug}`}>
-                          <h3 className="font-bold text-gray-900 mb-1 hover:text-primary line-clamp-2 hindi-text">
+                          <h3 className="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2 hindi-text leading-snug">
                             {product.nameHi}
                           </h3>
                         </Link>
-                        <p className="text-xs text-gray-500 mb-2 hidden">{product.name}</p>
-
+                        
                         {/* Rating */}
-                        <div className="flex items-center gap-1 mb-2">
-                          <div className="flex">
+                        <div className="flex items-center gap-1.5 mb-3">
+                          <div className="flex bg-gray-50 px-2 py-1 rounded-full border border-gray-100">
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                className={`w-3 h-3 ${i < Math.floor(product.rating || 0) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
+                                className={`w-3.5 h-3.5 ${i < Math.floor(product.rating || 0) ? 'text-amber-400 fill-amber-400' : 'text-gray-200'}`}
                               />
                             ))}
                           </div>
-                          <span className="text-xs text-gray-500">({product.reviewCount})</span>
+                          <span className="text-xs text-gray-500 font-medium">({product.reviewCount})</span>
                         </div>
 
-                        {/* Price */}
-                        <div className="flex items-baseline gap-2 mb-3">
-                          <span className="text-lg font-bold text-gray-900">₹{product.price?.toLocaleString()}</span>
-                          {product.mrp && (
-                            <span className="text-sm text-gray-400 line-through">₹{product.mrp.toLocaleString()}</span>
-                          )}
-                        </div>
+                        <div className="mt-auto">
+                          {/* Price */}
+                          <div className="flex items-baseline gap-2 mb-4">
+                            <span className="text-xl font-extrabold text-gray-900">₹{product.price?.toLocaleString()}</span>
+                            {product.mrp && (
+                              <span className="text-sm text-gray-400 line-through decoration-gray-300">₹{product.mrp.toLocaleString()}</span>
+                            )}
+                          </div>
 
-                        {/* Stock Status */}
-                        <div className="flex items-center gap-2 mb-3">
-                          {product.inStock ? (
-                            <span className="text-xs text-green-600 flex items-center gap-1">
-                              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                              स्टॉक में
-                            </span>
-                          ) : (
-                            <span className="text-xs text-red-600 flex items-center gap-1">
-                              <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                              स्टॉक में नहीं
-                            </span>
-                          )}
-                        </div>
+                          {/* Stock Status & CTA */}
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="flex items-center gap-1.5 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-100">
+                              {product.inStock ? (
+                                <>
+                                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                  <span className="text-xs font-medium text-gray-700">स्टॉक में</span>
+                                </>
+                              ) : (
+                                <>
+                                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                                  <span className="text-xs font-medium text-gray-700">स्टॉक नहीं</span>
+                                </>
+                              )}
+                            </div>
 
-                        {/* CTA */}
-                        <Link
-                          href={`/products/${product.slug}`}
-                          className="block w-full text-center py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors"
-                        >
-                          विवरण देखें
-                        </Link>
+                            <Link
+                              href={`/products/${product.slug}`}
+                              className="flex-1 text-center py-2.5 bg-gray-900 text-white text-sm font-bold rounded-xl group-hover:bg-primary transition-all duration-300 shadow-md group-hover:shadow-primary/30"
+                            >
+                              विवरण
+                            </Link>
+                          </div>
+                        </div>
                       </div>
                     </motion.div>
                   ))}

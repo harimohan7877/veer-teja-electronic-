@@ -42,6 +42,7 @@ export default function Navbar() {
     // Check for saved dark mode preference
     const savedDarkMode = localStorage.getItem('darkMode');
     if (savedDarkMode === 'true') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDarkMode(true);
       document.documentElement.classList.add('dark');
     }

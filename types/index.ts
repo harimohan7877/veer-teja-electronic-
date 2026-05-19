@@ -193,7 +193,7 @@ export interface StatsCounterProps {
 
 export interface BookingFormProps {
   services: Service[];
-  onSubmit: (data: any) => Promise<void>;
+  onSubmit: (data: BookingFormData) => Promise<void>;
 }
 
 export interface ContactCardProps {
@@ -214,7 +214,7 @@ export interface ToastMessage {
 
 // ============ API Response Types ============
 
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   success: boolean;
   data?: T;
   error?: string;

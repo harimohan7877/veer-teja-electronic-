@@ -25,7 +25,7 @@ export default function AboutPage() {
                 वीर तेजा इलेक्ट्रॉनिक & रिपेयरिंग सेंटर
               </h1>
               <p className="text-lg opacity-90 max-w-2xl mx-auto">
-                "हर इलेक्ट्रॉनिक की मरम्मत, एक ही छत के नीचे"
+                &quot;हर इलेक्ट्रॉनिक की मरम्मत, एक ही छत के नीचे&quot;
               </p>
             </motion.div>
           </div>

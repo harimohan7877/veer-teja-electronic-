@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 // Mock data storage for demo (in production, use database)
-const bookings: any[] = [];
+const bookings: Record<string, unknown>[] = [];
 
 // POST: Create new booking
 export async function POST(request: NextRequest) {

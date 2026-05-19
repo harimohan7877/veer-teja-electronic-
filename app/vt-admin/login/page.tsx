@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { Eye, EyeOff, Lock, Mail, AlertCircle } from 'lucide-react';
 
 export default function AdminLoginPage() {
@@ -104,9 +105,9 @@ export default function AdminLoginPage() {
           </form>
 
           <div className="mt-6 text-center">
-            <a href="/" className="text-sm text-primary hover:underline">
+            <Link href="/" className="text-sm text-primary hover:underline">
               ← Back to Website
-            </a>
+            </Link>
           </div>
         </div>
 

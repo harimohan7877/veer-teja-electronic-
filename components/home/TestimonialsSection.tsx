@@ -41,8 +41,8 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Review */}
-              <p className="text-gray-700 mb-3 leading-relaxed">"{testimonial.review}"</p>
-              <p className="text-gray-500 mb-4 hindi-text text-sm leading-relaxed">"{testimonial.reviewHi}"</p>
+              <p className="text-gray-700 mb-3 leading-relaxed">&quot;{testimonial.review}&quot;</p>
+              <p className="text-gray-500 mb-4 hindi-text text-sm leading-relaxed">&quot;{testimonial.reviewHi}&quot;</p>
 
               {/* Rating */}
               <div className="flex items-center gap-1 mb-4">
@@ -58,6 +58,7 @@ export default function TestimonialsSection() {
               <div className="flex items-center gap-3 pt-4 border-t">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                   {testimonial.imageUrl ? (
+                    /* eslint-disable-next-line @next/next/no-img-element */
                     <img
                       src={testimonial.imageUrl}
                       alt={testimonial.name}

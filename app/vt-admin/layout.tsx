@@ -25,6 +25,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     if (!session) {
       router.push('/vt-admin/login');
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsAuthorized(true);
     }
   }, [router]);
