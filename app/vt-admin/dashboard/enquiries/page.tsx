@@ -1,20 +1,30 @@
 'use client';
 
-import { useState } from 'react';
-import { Search, Phone, MessageCircle, Check, Trash2 } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, Phone, MessageCircle, Check, Trash2, Loader2 } from 'lucide-react';
 import AdminLayout from '@/app/vt-admin/layout';
 
-const enquiries = [
-  { id: 1, name: 'जय प्रकाश', phone: '9928330252', message: 'इन्वेर्टर की कीमत पूछनी है - 1KVA', source: 'Contact Page', isRead: false, createdAt: '2025-05-16 10:30 AM' },
-  { id: 2, name: 'अनीता शर्मा', phone: '6350211515', message: 'वाशिंग मशीन सर्विस के बारे में जानना है - कितने दिन लगते हैं?', source: 'WhatsApp', isRead: false, createdAt: '2025-05-16 09:15 AM' },
-  { id: 3, name: 'राजेश कुमार', phone: '8955293732', message: 'बैटरी रिप्लेसमेंट चाहिए - 150Ah Luminous', source: 'Contact Page', isRead: true, createdAt: '2025-05-15 04:20 PM' },
-  { id: 4, name: 'मोहन सिंह', phone: '9876543210', message: 'पंखा खरीदना है - 48 inch, कौन सा ब्रांड अच्छा है?', source: 'Contact Page', isRead: true, createdAt: '2025-05-14 02:00 PM' },
-  { id: 5, name: 'सुनीता देवी', phone: '9123456789', message: 'फ्रिज गैस लीक है, जल्दी आना पड़ेगा', source: 'Phone Call', isRead: true, createdAt: '2025-05-13 11:30 AM' },
-];
-
 export default function EnquiriesAdminPage() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [enquiries, setEnquiries] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [showUnread, setShowUnread] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/enquiry')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          setEnquiries(data.data);
+        }
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
 
   const filteredEnquiries = enquiries.filter(enquiry => {
     const matchesSearch = !searchTerm ||
@@ -63,53 +73,54 @@ export default function EnquiriesAdminPage() {
         </div>
 
         {/* Enquiries List */}
-        <div className="space-y-4">
-          {filteredEnquiries.map(enquiry => (
-            <div key={enquiry.id} className={`bg-white rounded-xl p-6 shadow-sm ${!enquiry.isRead ? 'border-l-4 border-primary' : ''}`}>
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-bold text-gray-900">{enquiry.name}</h3>
-                    {!enquiry.isRead && (
-                      <span className="px-2 py-0.5 bg-primary text-white text-xs rounded-full">New</span>
-                    )}
+        {loading ? (
+          <div className="flex justify-center items-center py-20">
+            <Loader2 className="w-8 h-8 animate-spin text-primary" />
+          </div>
+        ) : filteredEnquiries.length === 0 ? (
+          <div className="text-center py-20 text-gray-500 bg-white rounded-xl">
+            No enquiries found.
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {filteredEnquiries.map(enquiry => (
+              <div key={enquiry.id} className={`bg-white rounded-xl p-6 shadow-sm ${!enquiry.isRead ? 'border-l-4 border-primary' : ''}`}>
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-bold text-gray-900">{enquiry.name}</h3>
+                      {!enquiry.isRead && (
+                        <span className="px-2 py-0.5 bg-primary text-white text-xs rounded-full">New</span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-500">{new Date(enquiry.createdAt).toLocaleString()}</p>
                   </div>
-                  <p className="text-sm text-gray-500">{enquiry.createdAt}</p>
+                  <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">{enquiry.source || 'Website'}</span>
                 </div>
-                <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">{enquiry.source}</span>
+
+                <p className="text-gray-700 mb-4">{enquiry.message}</p>
+
+                <div className="flex items-center gap-3">
+                  <a href={`tel:${enquiry.phone}`} className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm">
+                    <Phone className="w-4 h-4" />
+                    Call
+                  </a>
+                  <a href={`https://wa.me/91${enquiry.phone}`} target="_blank" className="flex items-center gap-2 px-4 py-2 bg-whatsapp text-white rounded-lg hover:bg-green-600 text-sm">
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
+                  {enquiry.isRead ? (
+                    <button className="p-2 text-gray-400 hover:text-gray-600" title="Read">
+                      <Check className="w-5 h-5" />
+                    </button>
+                  ) : (
+                    <button className="p-2 text-primary hover:bg-primary/10 rounded-lg" title="Mark as read">
+                      <Check className="w-5 h-5" />
+                    </button>
+                  )}
+                </div>
               </div>
-
-              <p className="text-gray-700 mb-4">{enquiry.message}</p>
-
-              <div className="flex items-center gap-3">
-                <a href={`tel:${enquiry.phone}`} className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm">
-                  <Phone className="w-4 h-4" />
-                  Call
-                </a>
-                <a href={`https://wa.me/91${enquiry.phone}`} target="_blank" className="flex items-center gap-2 px-4 py-2 bg-whatsapp text-white rounded-lg hover:bg-green-600 text-sm">
-                  <MessageCircle className="w-4 h-4" />
-                  WhatsApp
-                </a>
-                {enquiry.isRead ? (
-                  <button className="p-2 text-gray-400 hover:text-gray-600">
-                    <Check className="w-5 h-5" />
-                  </button>
-                ) : (
-                  <button className="p-2 text-primary hover:bg-primary/10 rounded-lg" title="Mark as read">
-                    <Check className="w-5 h-5" />
-                  </button>
-                )}
-                <button className="p-2 text-red-600 hover:bg-red-50 rounded-lg" title="Delete">
-                  <Trash2 className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {filteredEnquiries.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500">No enquiries found</p>
+            ))}
           </div>
         )}
       </div>
