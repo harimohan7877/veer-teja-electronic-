@@ -60,7 +60,7 @@ export default async function DashboardPage() {
               {recentBookings.length === 0 ? (
                 <p className="text-sm text-gray-500">No bookings yet.</p>
               ) : (
-                recentBookings.map(booking => (
+                recentBookings.map((booking: any) => (
                   <div key={booking.id} className="flex items-center justify-between py-3 border-b last:border-0">
                     <div>
                       <p className="font-medium text-gray-900">{booking.customerName}</p>
