@@ -94,7 +94,7 @@ export default async function DashboardPage() {
               {recentEnquiries.length === 0 ? (
                 <p className="text-sm text-gray-500">No enquiries yet.</p>
               ) : (
-                recentEnquiries.map(enquiry => (
+                recentEnquiries.map((enquiry: any) => (
                   <div key={enquiry.id} className="py-3 border-b last:border-0">
                     <div className="flex items-center justify-between">
                       <p className="font-medium text-gray-900 flex items-center gap-2">
