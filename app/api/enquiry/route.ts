@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 
-// Disable static generation for this API
 export const dynamic = 'force-dynamic';
-
-// Mock data storage for demo (in production, use database)
-const enquiries: Record<string, unknown>[] = [];
 
 // POST: Create new enquiry
 export async function POST(request: NextRequest) {
@@ -20,18 +17,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Save to mock storage (in production, use Prisma)
-    const enquiry = {
-      id: `enq_${Date.now()}`,
-      name,
-      phone,
-      email: email || null,
-      message,
-      source: source || 'contact-page',
-      isRead: false,
-      createdAt: new Date(),
-    };
-    enquiries.push(enquiry);
+    const enquiry = await prisma.enquiry.create({
+      data: {
+        name,
+        phone,
+        email: email || null,
+        message,
+        source: source || 'contact-page',
+      },
+    });
 
     return NextResponse.json({
       success: true,
@@ -50,6 +44,9 @@ export async function POST(request: NextRequest) {
 // GET: Fetch all enquiries (for admin)
 export async function GET() {
   try {
+    const enquiries = await prisma.enquiry.findMany({
+      orderBy: { createdAt: 'desc' },
+    });
     return NextResponse.json({ success: true, data: enquiries });
   } catch (error) {
     console.error('Fetch enquiries error:', error);

@@ -1,16 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 
-// Disable static generation for this API
 export const dynamic = 'force-dynamic';
 
 // GET: Fetch all products
 export async function GET() {
   try {
-    // In production, fetch from database
+    const products = await prisma.product.findMany({
+      include: { category: true },
+      orderBy: { createdAt: 'desc' }
+    });
     return NextResponse.json({
       success: true,
-      data: [],
-      message: 'Products API - use /products page for product list'
+      data: products
     });
   } catch (error) {
     console.error('Fetch products error:', error);
@@ -25,7 +27,7 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, nameHi, slug, categoryId } = body;
+    const { name, nameHi, slug, categoryId, ...rest } = body;
 
     if (!name || !nameHi || !slug || !categoryId) {
       return NextResponse.json(
@@ -34,11 +36,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const product = {
-      id: `prod_${Date.now()}`,
-      ...body,
-      createdAt: new Date(),
-    };
+    const product = await prisma.product.create({
+      data: {
+        name,
+        nameHi,
+        slug,
+        categoryId,
+        ...rest
+      }
+    });
 
     return NextResponse.json({
       success: true,
@@ -67,9 +73,14 @@ export async function PUT(request: NextRequest) {
       );
     }
 
+    const updatedProduct = await prisma.product.update({
+      where: { id },
+      data: updateData
+    });
+
     return NextResponse.json({
       success: true,
-      data: { id, ...updateData },
+      data: updatedProduct,
       message: 'Product updated successfully',
     });
   } catch (error) {
@@ -93,6 +104,10 @@ export async function DELETE(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    await prisma.product.delete({
+      where: { id }
+    });
 
     return NextResponse.json({
       success: true,

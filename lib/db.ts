@@ -1,25 +1,11 @@
-// ========================================
-// Database Client - Safe wrapper for Prisma
-// ========================================
+import { PrismaClient } from '@prisma/client';
 
-// This is a placeholder that will be replaced with real Prisma client
-// when database is properly configured
-export const prisma = {
-  enquiry: {
-    create: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
-    findMany: async () => [],
-  },
-  booking: {
-    create: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
-    findMany: async () => [],
-  },
-  product: {
-    create: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
-    findMany: async () => [],
-    update: async (data: Record<string, unknown>) => ({ id: 'mock', ...data }),
-    delete: async () => ({}),
-  },
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined;
 };
 
-// Mock Prisma client for build time
+export const prisma = globalForPrisma.prisma ?? new PrismaClient();
+
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
 export default prisma;

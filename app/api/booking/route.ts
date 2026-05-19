@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 
-// Disable static generation for this API
 export const dynamic = 'force-dynamic';
-
-// Mock data storage for demo (in production, use database)
-const bookings: Record<string, unknown>[] = [];
 
 // POST: Create new booking
 export async function POST(request: NextRequest) {
@@ -29,25 +26,43 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate booking number
     const bookingNo = `BK${Date.now().toString(36).toUpperCase()}`;
 
-    // Save to mock storage
-    const booking = {
-      id: `bk_${Date.now()}`,
-      bookingNo,
-      customerName,
-      phone,
-      address: address || null,
-      serviceId,
-      deviceBrand: deviceBrand || null,
-      deviceModel: deviceModel || null,
-      issueDesc,
-      preferredDate: preferredDate || null,
-      status: 'PENDING',
-      createdAt: new Date(),
-    };
-    bookings.push(booking);
+    // Note: ensure the `serviceId` passed from the frontend actually exists in the `Service` table.
+    // If it's just a string like "AC Repair", we might need to handle it differently, 
+    // or seed the services first. For now, assuming serviceId is a valid ID.
+    
+    // Check if the service exists, if not, create a generic placeholder service just to satisfy the relation
+    let existingService = await prisma.service.findUnique({ where: { id: serviceId } });
+    if (!existingService) {
+      // Fallback if frontend sends a name instead of ID
+      existingService = await prisma.service.findFirst({ where: { nameHi: serviceId } });
+      
+      if (!existingService) {
+          existingService = await prisma.service.create({
+            data: {
+                id: serviceId,
+                name: serviceId,
+                nameHi: serviceId,
+                slug: serviceId.toLowerCase().replace(/\\s+/g, '-'),
+            }
+          });
+      }
+    }
+
+    const booking = await prisma.booking.create({
+      data: {
+        bookingNo,
+        customerName,
+        phone,
+        address: address || null,
+        serviceId: existingService.id,
+        deviceBrand: deviceBrand || null,
+        deviceModel: deviceModel || null,
+        issueDesc,
+        preferredDate: preferredDate ? new Date(preferredDate) : null,
+      },
+    });
 
     return NextResponse.json({
       success: true,
@@ -66,6 +81,10 @@ export async function POST(request: NextRequest) {
 // GET: Fetch all bookings (for admin)
 export async function GET() {
   try {
+    const bookings = await prisma.booking.findMany({
+      orderBy: { createdAt: 'desc' },
+      include: { service: true }
+    });
     return NextResponse.json({ success: true, data: bookings });
   } catch (error) {
     console.error('Fetch bookings error:', error);
