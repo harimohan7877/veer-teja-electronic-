@@ -87,25 +87,28 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white dark:bg-gray-900 shadow-lg'
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-2xl'
           : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md'
       }`}
     >
-      {/* Top Bar - Professional Navy */}
-      <div className="bg-primary text-white py-1.5 px-4 hidden md:block border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-xs font-medium tracking-wide">
+      {/* Top Bar - Premium Adaptation */}
+      <div className="md:bg-primary bg-white text-primary md:text-white py-1.5 px-4 border-b border-border md:border-white/10 transition-colors">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-[10px] md:text-xs font-black tracking-widest uppercase">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 hover:text-accent transition-colors cursor-default">
-              <Phone className="w-3.5 h-3.5" /> 9928330252 | 6350211515
+              <Phone className="w-3 h-3 md:w-3.5 md:h-3.5" /> 9928330252
             </span>
-            <span className="opacity-50">|</span>
-            <span className="flex items-center gap-1.5 hover:text-accent transition-colors cursor-default">
+            <span className="opacity-20 hidden md:block">|</span>
+            <span className="hidden md:flex items-center gap-1.5 hover:text-accent transition-colors cursor-default">
               🏪 Wholesale & Retail Available
             </span>
           </div>
           <div className="flex items-center gap-4">
             <Link href="/contact" className="hover:text-accent transition-colors">Support</Link>
-            <Link href="/about" className="hover:text-accent transition-colors">About Us</Link>
+            <Link href="/about" className="hover:text-accent transition-colors hidden md:block">About Us</Link>
+            <div className="md:hidden">
+               <CartButton />
+            </div>
           </div>
         </div>
       </div>
@@ -113,16 +116,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-secondary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-              <span className="text-white text-xl md:text-2xl">⚡</span>
+          <Link href="/" className="flex items-center gap-2.5 md:gap-3 group">
+            <div className="w-9 h-9 md:w-12 md:h-12 bg-secondary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <span className="text-white text-lg md:text-2xl">⚡</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-lg md:text-xl font-extrabold text-primary hindi-text leading-tight group-hover:text-secondary transition-colors">
+              <span className="text-base md:text-xl font-black text-primary hindi-text leading-tight group-hover:text-secondary transition-colors">
                 वीर तेजा
               </span>
-              <span className="text-[10px] md:text-xs text-text-light uppercase tracking-[0.2em] font-bold">
-                Electronics & Repair
+              <span className="text-[8px] md:text-xs text-text-light uppercase tracking-[0.2em] font-black">
+                Electronics
               </span>
             </div>
           </Link>
@@ -179,7 +182,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-text-mid hover:text-secondary font-semibold transition-all relative group py-2"
+                className="text-text-mid hover:text-secondary font-bold uppercase tracking-widest text-[11px] transition-all relative group py-2"
               >
                 <span className="hindi-text text-sm md:text-base">{link.labelHi}</span>
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full rounded-full" />
@@ -207,90 +210,102 @@ export default function Navbar() {
               <WishlistCount />
             </Link>
 
-            {/* Cart Button */}
             <CartButton />
 
             <Link
               href="tel:9928330252"
-              className="flex items-center gap-2 px-4 py-2.5 bg-surface text-text-dark rounded-xl hover:bg-border transition-all border border-border font-bold shadow-sm"
+              className="flex items-center gap-2 px-4 py-2.5 bg-surface text-text-dark rounded-xl hover:bg-border transition-all border border-border font-black text-[10px] uppercase tracking-widest shadow-sm"
             >
-              <Phone className="w-4 h-4 text-secondary" />
-              <span className="hidden lg:inline text-sm">कॉल करें</span>
+              <Phone className="w-3.5 h-3.5 text-secondary" />
+              <span className="hidden lg:inline">Call Support</span>
             </Link>
             <Link
               href="https://wa.me/919928330252?text=नमस्ते! मुझे अपने इलेक्ट्रॉनिक सामान की मरम्मत करवानी है।"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2.5 bg-whatsapp text-white rounded-xl hover:shadow-[0_4px_15px_rgba(37,211,102,0.4)] transition-all font-bold shadow-sm active:scale-95"
+              className="flex items-center gap-2 px-4 py-2.5 bg-whatsapp text-white rounded-xl hover:shadow-[0_4px_15px_rgba(37,211,102,0.4)] transition-all font-black text-[10px] uppercase tracking-widest shadow-sm active:scale-95"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span className="hidden lg:inline text-sm">WhatsApp</span>
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span className="hidden lg:inline">WhatsApp</span>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="md:hidden p-2.5 rounded-xl bg-surface border border-border text-primary shadow-sm active:scale-95 transition-all"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Premium Glassmorphism */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-gray-900 shadow-lg border-t"
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed inset-0 top-[90px] z-40 md:hidden bg-white/80 backdrop-blur-2xl dark:bg-gray-900/80 border-t border-border overflow-y-auto"
           >
-            <div className="px-4 py-4 space-y-3">
-              {/* Mobile Search */}
-              <form onSubmit={(e) => { e.preventDefault(); if(searchQuery.trim()) { router.push(`/products?search=${encodeURIComponent(searchQuery)}`); setIsOpen(false); }}} className="relative mb-4">
+            <div className="px-6 py-8 space-y-6">
+              {/* Mobile Search - Enhanced */}
+              <form onSubmit={(e) => { e.preventDefault(); if(searchQuery.trim()) { router.push(`/products?search=${encodeURIComponent(searchQuery)}`); setIsOpen(false); }}} className="relative">
                 <input
                   type="text"
-                  placeholder="Search products..."
+                  placeholder="Search premium electronics..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-4 pr-12 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary dark:bg-gray-800 dark:text-white"
+                  className="w-full pl-5 pr-14 py-4 bg-white/50 border-2 border-border rounded-2xl focus:outline-none focus:border-secondary font-bold text-sm shadow-inner"
                 />
-                <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 bg-primary text-white rounded-md">
-                  <Search className="w-4 h-4" />
+                <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 p-2.5 bg-secondary text-white rounded-xl shadow-lg">
+                  <Search className="w-5 h-5" />
                 </button>
               </form>
 
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block py-2.5 px-4 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-medium"
-                >
-                  <span className="hindi-text">{link.labelHi}</span>
-                  <span className="hidden ml-2">({link.label})</span>
-                </Link>
-              ))}
+              <div className="grid grid-cols-1 gap-2">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-between py-4 px-6 bg-white/50 hover:bg-secondary/10 rounded-2xl transition-all border border-transparent hover:border-secondary/20 group"
+                  >
+                    <span className="hindi-text text-lg font-black text-primary group-hover:text-secondary">{link.labelHi}</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-text-light opacity-50 group-hover:opacity-100">{link.label}</span>
+                  </Link>
+                ))}
+              </div>
 
-              <div className="pt-4 flex flex-col gap-3 border-t">
+              <div className="pt-8 flex flex-col gap-4">
                 <Link
                   href="tel:9928330252"
-                  className="flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg"
+                  className="flex items-center justify-center gap-3 py-4.5 bg-primary text-white rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] shadow-2xl shadow-primary/30 active:scale-95 transition-all"
                 >
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span className="hindi-text font-medium">कॉल करें</span>
+                  <Phone className="w-4 h-4 text-accent" />
+                  Call Support
                 </Link>
                 <Link
                   href="https://wa.me/919928330252"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-2.5 bg-whatsapp text-white rounded-lg font-medium"
+                  className="flex items-center justify-center gap-3 py-4.5 bg-whatsapp text-white rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] shadow-2xl shadow-whatsapp/30 active:scale-95 transition-all"
                 >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>WhatsApp</span>
+                  <MessageCircle className="w-4 h-4" />
+                  Chat on WhatsApp
                 </Link>
+              </div>
+              
+              <div className="flex justify-center gap-8 pt-8 border-t border-border">
+                  <button onClick={toggleDarkMode} className="p-4 bg-surface rounded-2xl border border-border shadow-sm">
+                      {darkMode ? <Sun className="w-6 h-6 text-warning" /> : <Moon className="w-6 h-6 text-text-mid" />}
+                  </button>
+                  <Link href="/wishlist" onClick={() => setIsOpen(false)} className="relative p-4 bg-surface rounded-2xl border border-border shadow-sm">
+                      <Heart className="w-6 h-6 text-text-mid" />
+                      <WishlistCount />
+                  </Link>
               </div>
             </div>
           </motion.div>
