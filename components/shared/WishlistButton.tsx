@@ -60,17 +60,17 @@ export default function WishlistButton({ product, size = 'md', showLabel = false
   return (
     <button
       onClick={handleClick}
-      className={`${sizeClasses[size]} rounded-full flex items-center justify-center transition-all ${
+      className={`${sizeClasses[size]} rounded-xl flex items-center justify-center transition-all ${
         isWishlisted
-          ? 'bg-red-50 text-red-500 hover:bg-red-100'
-          : 'bg-white text-gray-400 hover:text-red-500 shadow-md hover:shadow-lg'
-      }`}
+          ? 'bg-danger/10 text-danger border border-danger/20'
+          : 'bg-white/90 backdrop-blur-sm text-text-light hover:text-danger shadow-lg border border-border hover:border-danger/30'
+      } active:scale-95 group`}
       title={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
     >
-      <Heart className={`${iconSizes[size]} ${isWishlisted ? 'fill-current' : ''}`} />
+      <Heart className={`${iconSizes[size]} ${isWishlisted ? 'fill-current' : 'group-hover:scale-110 transition-transform'}`} />
       {showLabel && (
-        <span className="ml-2 text-sm font-medium">
-          {isWishlisted ? 'Wishlisted' : 'Wishlist'}
+        <span className="ml-2 text-xs font-black uppercase tracking-widest">
+          {isWishlisted ? 'Saved' : 'Save'}
         </span>
       )}
     </button>

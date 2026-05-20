@@ -60,70 +60,73 @@ function ProductsContent() {
       <Navbar />
       <main className="min-h-screen bg-gray-50 pt-20">
         {/* Breadcrumb */}
-        <div className="bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 py-3">
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <Link href="/" className="hover:text-primary">Home</Link>
-              <span>/</span>
-              <span className="text-gray-900">Products</span>
+        <div className="bg-white border-b border-border">
+          <div className="max-w-7xl mx-auto px-4 py-4">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-light">
+              <Link href="/" className="hover:text-secondary transition-colors">Home</Link>
+              <span className="text-border">/</span>
+              <span className="text-text-mid">Products</span>
               {currentCategory && (
                 <>
-                  <span>/</span>
-                  <span className="text-gray-900">{currentCategory.nameEn}</span>
+                  <span className="text-border">/</span>
+                  <span className="text-secondary">{currentCategory.nameEn}</span>
                 </>
               )}
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-12">
           {/* Page Header */}
-          <div className="mb-8">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-              <span className="hindi-text">
+          <div className="mb-12">
+            <h1 className="text-3xl md:text-4xl font-black text-primary mb-3">
+              <span className="hindi-text tracking-tight">
                 {searchQuery ? `Search: "${searchQuery}"` : currentCategory ? currentCategory.name : 'सभी उत्पाद'}
               </span>
             </h1>
-            <p className="text-gray-500">
-              {sortedProducts.length} उत्पाद मिले
+            <div className="flex items-center gap-4">
+              <p className="text-text-mid font-bold uppercase text-[10px] tracking-[0.2em] bg-surface px-3 py-1 rounded-lg border border-border">
+                {sortedProducts.length} PRODUCTS FOUND
+              </p>
               {searchQuery && (
-                <Link href="/products" className="ml-2 text-primary hover:underline">
-                  (Clear search)
+                <Link href="/products" className="text-secondary font-black text-[10px] uppercase tracking-widest hover:underline">
+                  CLEAR SEARCH
                 </Link>
               )}
-            </p>
+            </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row gap-10">
             {/* Sidebar Filters - Desktop */}
-            <aside className="hidden lg:block w-64 flex-shrink-0">
-              <div className="bg-white rounded-xl p-5 sticky top-24">
-                <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Filter className="w-4 h-4" />
-                  श्रेणियां
+            <aside className="hidden lg:block w-72 flex-shrink-0">
+              <div className="bg-white rounded-2xl p-6 sticky top-28 border border-border shadow-sm">
+                <h3 className="text-xs font-black text-primary mb-6 flex items-center gap-2 uppercase tracking-[0.2em]">
+                  <Filter className="w-4 h-4 text-secondary" />
+                  Categories
                 </h3>
                 <div className="space-y-2">
                   <button
                     onClick={() => setSelectedCategory(null)}
-                    className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
+                    className={`w-full text-left px-4 py-3 rounded-xl font-bold transition-all text-sm flex items-center gap-3 ${
                       !selectedCategory
-                        ? 'bg-primary text-white'
-                        : 'text-gray-600 hover:bg-gray-100'
+                        ? 'bg-secondary text-white shadow-lg shadow-secondary/20'
+                        : 'text-text-mid hover:bg-surface hover:text-secondary'
                     }`}
                   >
-                    सभी उत्पाद
+                    <Grid className="w-4 h-4" />
+                    <span>All Products</span>
                   </button>
                   {CATEGORIES.map(category => (
                     <button
                       key={category.id}
                       onClick={() => setSelectedCategory(category.slug)}
-                      className={`w-full text-left px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${
+                      className={`w-full text-left px-4 py-3 rounded-xl font-bold transition-all text-sm flex items-center gap-3 ${
                         selectedCategory === category.slug
-                          ? 'bg-primary text-white'
-                          : 'text-gray-600 hover:bg-gray-100'
+                          ? 'bg-secondary text-white shadow-lg shadow-secondary/20'
+                          : 'text-text-mid hover:bg-surface hover:text-secondary'
                       }`}
                     >
-                      <span>{category.icon}</span>
+                      <span className="text-lg">{category.icon}</span>
                       <span className="hindi-text">{category.name}</span>
                     </button>
                   ))}
@@ -134,44 +137,44 @@ function ProductsContent() {
             {/* Mobile Filter Button */}
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="lg:hidden flex items-center gap-2 px-4 py-2 bg-white rounded-lg border"
+              className="lg:hidden flex items-center justify-center gap-3 px-6 py-3.5 bg-white rounded-xl border-2 border-border font-black text-xs uppercase tracking-widest text-primary shadow-sm active:scale-95"
             >
-              <Filter className="w-4 h-4" />
-              फ़िल्टर
+              <Filter className="w-4 h-4 text-secondary" />
+              Filter Products
             </button>
 
             {/* Products Grid */}
             <div className="flex-1">
               {/* Sort & View Controls */}
-              <div className="flex items-center justify-between mb-6 bg-white p-4 rounded-xl">
+              <div className="flex items-center justify-between mb-8 bg-white p-5 rounded-2xl border border-border shadow-sm">
                 <div className="flex items-center gap-4">
-                  <span className="text-sm text-gray-500">{sortedProducts.length} उत्पाद</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-text-light">{sortedProducts.length} Results</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm text-gray-500">क्रम:</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-text-light">Sort:</span>
                     <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
-                      className="border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary"
+                      className="border-2 border-border rounded-xl px-4 py-2 text-xs font-bold text-primary focus:outline-none focus:border-secondary bg-surface transition-all"
                     >
-                      <option value="featured">विशेष</option>
-                      <option value="newest">नया</option>
-                      <option value="price-low">कम से कम</option>
-                      <option value="price-high">ज्यादा से कम</option>
-                      <option value="rating">रेटिंग</option>
+                      <option value="featured">Featured</option>
+                      <option value="newest">Newest</option>
+                      <option value="price-low">Price: Low to High</option>
+                      <option value="price-high">Price: High to Low</option>
+                      <option value="rating">Rating</option>
                     </select>
                   </div>
-                  <div className="hidden md:flex border rounded-lg overflow-hidden">
+                  <div className="hidden md:flex border-2 border-border rounded-xl overflow-hidden shadow-sm">
                     <button
                       onClick={() => setViewMode('grid')}
-                      className={`p-2 ${viewMode === 'grid' ? 'bg-primary text-white' : 'bg-white'}`}
+                      className={`p-2.5 transition-all ${viewMode === 'grid' ? 'bg-secondary text-white' : 'bg-white text-text-light hover:text-secondary'}`}
                     >
                       <Grid className="w-4 h-4" />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
-                      className={`p-2 ${viewMode === 'list' ? 'bg-primary text-white' : 'bg-white'}`}
+                      className={`p-2.5 transition-all border-l-2 border-border ${viewMode === 'list' ? 'bg-secondary text-white' : 'bg-white text-text-light hover:text-secondary'}`}
                     >
                       <List className="w-4 h-4" />
                     </button>
@@ -181,10 +184,13 @@ function ProductsContent() {
 
               {/* Products */}
               {sortedProducts.length === 0 ? (
-                <div className="text-center py-16">
-                  <p className="text-gray-500 mb-4">कोई उत्पाद नहीं मिला</p>
-                  <Link href="/products" className="text-primary hover:underline">
-                    सभी उत्पाद देखें
+                <div className="text-center py-24 bg-white rounded-3xl border border-border border-dashed">
+                  <div className="w-20 h-20 bg-surface rounded-full flex items-center justify-center mx-auto mb-6">
+                    <X className="w-10 h-10 text-text-light" />
+                  </div>
+                  <p className="text-text-mid font-bold mb-4 uppercase tracking-widest text-xs">No products found matching your criteria</p>
+                  <Link href="/products" className="text-secondary font-black uppercase tracking-widest text-xs hover:underline">
+                    VIEW ALL PRODUCTS
                   </Link>
                 </div>
               ) : (
@@ -199,83 +205,81 @@ function ProductsContent() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
-                      className={`group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100/80 hover:border-primary/30 ${
-                        viewMode === 'list' ? 'flex' : ''
+                      className={`product-card group ${
+                        viewMode === 'list' ? 'flex-row' : ''
                       }`}
                     >
                       {/* Image */}
-                      <Link href={`/products/${product.slug}`} className={`block overflow-hidden relative ${viewMode === 'list' ? 'w-56 flex-shrink-0 border-r border-gray-100' : ''}`}>
-                        <div className={`relative bg-gray-50/50 ${viewMode === 'list' ? 'h-full' : 'h-52'}`}>
-                          <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                      <Link href={`/products/${product.slug}`} className={`block overflow-hidden relative ${viewMode === 'list' ? 'w-64 flex-shrink-0' : ''}`}>
+                        <div className={`product-img-wrapper ${viewMode === 'list' ? 'h-full aspect-auto' : ''}`}>
                           <img
                             src={product.images[0] || 'https://via.placeholder.com/400x300?text=Product'}
                             alt={product.name}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                           />
-                          {product.discount && product.discount >= 20 && (
-                            <span className="absolute top-3 left-3 px-2.5 py-1 bg-gradient-to-r from-red-600 to-rose-500 text-white text-xs font-bold rounded-full shadow-lg z-20">
+                          {product.discount && product.discount >= 10 && (
+                            <span className="absolute top-4 left-4 px-3 py-1 bg-danger text-white text-[10px] font-black uppercase tracking-widest rounded-lg shadow-xl z-20">
                               {product.discount}% OFF
                             </span>
                           )}
                           {/* Wishlist Button */}
-                          <div className="absolute top-3 right-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100">
                             <WishlistButton product={product} size="sm" />
                           </div>
                         </div>
                       </Link>
 
                       {/* Content */}
-                      <div className="p-5 flex-1 flex flex-col">
-                        <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-1">{product.brand}</p>
+                      <div className="p-6 flex-1 flex flex-col">
+                        <p className="text-[10px] text-secondary font-black uppercase tracking-[0.2em] mb-2">{product.brand}</p>
                         <Link href={`/products/${product.slug}`}>
-                          <h3 className="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2 hindi-text leading-snug">
+                          <h3 className="font-bold text-primary mb-2 group-hover:text-secondary transition-colors line-clamp-2 hindi-text leading-tight text-lg">
                             {product.nameHi}
                           </h3>
                         </Link>
                         
                         {/* Rating */}
-                        <div className="flex items-center gap-1.5 mb-3">
-                          <div className="flex bg-gray-50 px-2 py-1 rounded-full border border-gray-100">
+                        <div className="flex items-center gap-1.5 mb-4">
+                          <div className="flex gap-0.5">
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                className={`w-3.5 h-3.5 ${i < Math.floor(product.rating || 0) ? 'text-amber-400 fill-amber-400' : 'text-gray-200'}`}
+                                className={`w-3.5 h-3.5 ${i < Math.floor(product.rating || 0) ? 'text-warning fill-warning' : 'text-border'}`}
                               />
                             ))}
                           </div>
-                          <span className="text-xs text-gray-500 font-medium">({product.reviewCount})</span>
+                          <span className="text-[10px] text-text-light font-bold uppercase tracking-widest">({product.reviewCount})</span>
                         </div>
 
                         <div className="mt-auto">
                           {/* Price */}
-                          <div className="flex items-baseline gap-2 mb-4">
-                            <span className="text-xl font-extrabold text-gray-900">₹{product.price?.toLocaleString()}</span>
+                          <div className="flex items-baseline gap-2 mb-6">
+                            <span className="text-2xl font-black text-secondary tracking-tighter">₹{product.price?.toLocaleString()}</span>
                             {product.mrp && (
-                              <span className="text-sm text-gray-400 line-through decoration-gray-300">₹{product.mrp.toLocaleString()}</span>
+                              <span className="text-sm text-text-light line-through font-medium">₹{product.mrp.toLocaleString()}</span>
                             )}
                           </div>
 
                           {/* Stock Status & CTA */}
-                          <div className="flex items-center justify-between gap-3">
-                            <div className="flex items-center gap-1.5 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-100">
+                          <div className="flex items-center justify-between gap-4">
+                            <div className="flex items-center gap-2 bg-surface px-3 py-1.5 rounded-lg border border-border">
                               {product.inStock ? (
                                 <>
-                                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                  <span className="text-xs font-medium text-gray-700">स्टॉक में</span>
+                                  <span className="w-2 h-2 bg-success rounded-full animate-pulse"></span>
+                                  <span className="text-[10px] font-black uppercase tracking-widest text-text-mid">In Stock</span>
                                 </>
                               ) : (
                                 <>
-                                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                                  <span className="text-xs font-medium text-gray-700">स्टॉक नहीं</span>
+                                  <span className="w-2 h-2 bg-danger rounded-full"></span>
+                                  <span className="text-[10px] font-black uppercase tracking-widest text-text-mid">Sold Out</span>
                                 </>
                               )}
                             </div>
 
                             <Link
                               href={`/products/${product.slug}`}
-                              className="flex-1 text-center py-2.5 bg-gray-900 text-white text-sm font-bold rounded-xl group-hover:bg-primary transition-all duration-300 shadow-md group-hover:shadow-primary/30"
+                              className="flex-1 text-center py-3 bg-primary text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-xl hover:bg-secondary transition-all shadow-lg active:scale-95"
                             >
-                              विवरण
+                              VIEW
                             </Link>
                           </div>
                         </div>

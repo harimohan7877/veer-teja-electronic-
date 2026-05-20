@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Devanagari, Poppins } from "next/font/google";
+import { Noto_Sans_Devanagari, Inter } from "next/font/google";
 import "./globals.css";
 
 const notoSans = Noto_Sans_Devanagari({
@@ -8,10 +8,10 @@ const notoSans = Noto_Sans_Devanagari({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -39,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="hi" className={`${notoSans.variable} ${poppins.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[var(--background)] text-[var(--foreground)]">
+    <html lang="hi" className={`${notoSans.variable} ${inter.variable}`}>
+      <body className="min-h-screen flex flex-col bg-[var(--background)] text-[var(--foreground)] antialiased">
         {children}
       </body>
     </html>
