@@ -48,9 +48,10 @@ export const TESTIMONIALS = [
 ];
 
 export const BANNERS = [
-  { id: '1', title: 'Repair Services', titleHi: 'मरम्मत सेवाएं', subtitle: 'कूलर • पंखा • फ्रिज • वाशिंग मशीन • इन्वेर्टर', imageUrl: 'https://images.unsplash.com/photo-1585771724684-38269d7239d4?w=1920&h=600&fit=crop', link: '/services', sortOrder: 1 },
-  { id: '2', title: 'Sale on Inverters', titleHi: 'इन्वेर्टर पर बिक्री', subtitle: 'बड़ी बचत • सभी ब्रांड • थोक दरें', imageUrl: 'https://images.unsplash.com/photo-1621905252507-b35492ac74e4?w=1920&h=600&fit=crop', link: '/products?category=inverter-battery', sortOrder: 2 },
-  { id: '3', title: '20+ Years Trust', titleHi: '20+ साल का भरोसा', subtitle: 'हजारों संतुष्ट ग्राहक • जयसंगसर & गोमटिया', imageUrl: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=1920&h=600&fit=crop', link: '/about', sortOrder: 3 },
+  { id: '1', title: 'Repair Services', titleHi: 'मरम्मत सेवाएं', subtitle: 'कूलर • पंखा • फ्रिज • वाशिंग मशीन • इन्वेर्टर', imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&h=800&fit=crop', link: '/services', sortOrder: 1 },
+  { id: '2', title: 'Sale on Inverters', titleHi: 'इन्वेर्टर पर बिक्री', subtitle: 'बड़ी बचत • सभी ब्रांड • थोक दरें', imageUrl: 'https://images.unsplash.com/photo-1621905252507-b35492ac74e4?w=1920&h=800&fit=crop', link: '/products?category=inverter-battery', sortOrder: 2 },
+  { id: '3', title: 'Home Appliances', titleHi: 'घरेलू उपकरण', subtitle: 'फ्रिज, वाशिंग मशीन और बहुत कुछ', imageUrl: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1920&h=800&fit=crop', link: '/products', sortOrder: 3 },
+  { id: '4', title: 'Expert Repair', titleHi: 'विशेषज्ञ मरम्मत', subtitle: 'अनुभवी कारीगरों द्वारा तुरंत सेवा', imageUrl: 'https://images.unsplash.com/photo-1558227691-41ea78a1f631?w=1920&h=800&fit=crop', link: '/services', sortOrder: 4 },
 ];
 
 export const BRANDS = [
