@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Clock, CheckCircle, Phone, Calendar, ArrowRight, Wrench, Snowflake, Fan, Refrigerator, Tv, Zap } from 'lucide-react';
+import { Clock, CheckCircle, Phone, Calendar, ArrowRight, Wrench, Snowflake, Fan, Refrigerator, Tv, Zap, MessageCircle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
