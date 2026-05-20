@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Star, ArrowRight, Heart, ShoppingCart, Zap, TrendingUp } from 'lucide-react';
+import { Star, ArrowRight, Heart, Zap, TrendingUp } from 'lucide-react';
 import { PRODUCTS } from '@/lib/data';
 
 export default function ProductsSection() {
