@@ -51,7 +51,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-primary">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary pt-28 md:pt-32">
       {/* Background Slides with Swipe Support */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence initial={false} custom={direction}>

@@ -58,7 +58,7 @@ function ProductsContent() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gray-50 pt-20">
+      <main className="min-h-screen bg-gray-50 pt-32">
         {/* Breadcrumb */}
         <div className="bg-white border-b border-border">
           <div className="max-w-7xl mx-auto px-4 py-4">

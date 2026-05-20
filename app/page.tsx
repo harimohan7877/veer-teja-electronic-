@@ -21,7 +21,6 @@ export default function Home() {
         <ProductsSection />
         <ServicesSection />
         <StatsCounter />
-        <TestimonialsSection />
         <BrandsStrip />
       </main>
       <Footer />

@@ -20,7 +20,7 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gray-50 pt-20">
+      <main className="min-h-screen bg-gray-50 pt-32">
         {/* Hero */}
         <div className="relative overflow-hidden bg-primary text-white py-24">
           <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-primary to-accent/10 opacity-80" />
