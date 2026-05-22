@@ -5,9 +5,9 @@
 
 export const CATEGORIES = [
   { id: '1', name: 'MCB & DB', nameEn: 'MCB & Board', slug: 'mcb-db', icon: '⚡', imageUrl: 'https://iili.io/C9eDwiP.jpg' },
-  { id: '2', name: 'स्विच & सॉकेट', nameEn: 'Switch & Socket', slug: 'switch-socket', icon: '🔌', imageUrl: 'https://iili.io/C9ebdq7.jpg' },
-  { id: '3', name: 'पंखा', nameEn: 'Fan', slug: 'fan', icon: '🌀', imageUrl: 'https://iili.io/C9k99yu.jpg' },
-  { id: '4', name: 'कूलर', nameEn: 'Cooler', slug: 'cooler', icon: '❄️', imageUrl: 'https://iili.io/C9em2Qp.jpg' },
+  { id: '2', name: 'स्विच & सॉकेट', nameEn: 'Switch & Socket', slug: 'switch-socket', icon: '🔌', imageUrl: 'https://iili.io/C9eDWDQ.jpg' },
+  { id: '3', name: 'पंखा', nameEn: 'Fan', slug: 'fan', icon: '🌀', imageUrl: 'https://iili.io/C9k9mVR.jpg' },
+  { id: '4', name: 'कूलर', nameEn: 'Cooler', slug: 'cooler', icon: '❄️', imageUrl: 'https://iili.io/C9k99yu.jpg' },
   { id: '5', name: 'वायर & केबल', nameEn: 'Wire & Cable', slug: 'wiring-cable', icon: '🔧', imageUrl: 'https://iili.io/C9eyT1S.jpg' },
   { id: '6', name: 'पानी की टंकी / कैन', nameEn: 'Water Tank & Can', slug: 'water-can', icon: '💧', imageUrl: 'https://iili.io/C9eym37.jpg' },
   { id: '7', name: 'मोटर & पम्प', nameEn: 'Motors & Pumps', slug: 'motor-pump', icon: '⚙️', imageUrl: 'https://iili.io/C9epAOJ.jpg' },
@@ -15,15 +15,15 @@ export const CATEGORIES = [
 ];
 
 export const SERVICES = [
-  { id: '1', name: 'Cooler Repair', nameHi: 'कूलर मरम्मत', slug: 'cooler-repair', price: 299, duration: 'Same Day', icon: '❄️', description: 'Professional air cooler repair & service. All brands covered.', descriptionHi: 'प्रोफेशनल एयर कूलर मरम्मत और सर्विस। सभी ब्रांड।', isFeatured: true, imageUrl: 'https://iili.io/C9em2Qp.jpg' },
-  { id: '2', name: 'Fan Repair', nameHi: 'पंखा मरम्मत', slug: 'fan-repair', price: 199, duration: 'Same Day', icon: '🌀', description: 'Ceiling, table & exhaust fan repair. Same day service.', descriptionHi: 'सीलिंग, टेबल और एग्जॉस्ट पंखा मरम्मत। उसी दिन सेवा।', isFeatured: true, imageUrl: 'https://iili.io/C9emKGI.jpg' },
-  { id: '3', name: 'Refrigerator Repair', nameHi: 'फ्रिज मरम्मत', slug: 'fridge-repair', price: 399, duration: '1-2 Days', icon: '🧊', description: 'All brands refrigerator repair. Gas refilling & compressor.', descriptionHi: 'सभी ब्रांड फ्रिज मरम्मत। गैस रिफिलिंग और कम्प्रेसर।', isFeatured: true, imageUrl: 'https://iili.io/C9emB3X.jpg' },
-  { id: '4', name: 'Washing Machine Repair', nameHi: 'वाशिंग मशीन मरम्मत', slug: 'washing-machine-repair', price: 499, duration: '1-2 Days', icon: '🧺', description: 'Front load & top load washing machine repair.', descriptionHi: 'फ्रंट लोड और टॉप लोड वाशिंग मशीन मरम्मत।', isFeatured: true, imageUrl: 'https://iili.io/C9emCan.jpg' },
-  { id: '5', name: 'Inverter Service', nameHi: 'इन्वेर्टर सर्विस', slug: 'inverter-service', price: 349, duration: 'Same Day', icon: '🔋', description: 'Inverter repair & battery service. All brands.', descriptionHi: 'इन्वेर्टर मरम्मत और बैटरी सर्विस। सभी ब्रांड।', isFeatured: true, imageUrl: 'https://iili.io/C9epqoQ.jpg' },
-  { id: '6', name: 'LED TV Repair', nameHi: 'LED टीवी मरम्मत', slug: 'led-tv-repair', price: 599, duration: '2-3 Days', icon: '📺', description: 'LED & Smart TV repair. Panel & board replacement.', descriptionHi: 'LED और स्मार्ट टीवी मरम्मत। पैनल और बोर्ड रिप्लेसमेंट।', imageUrl: 'https://iili.io/C9k9Ca1.jpg' },
-  { id: '7', name: 'Motor Winding', nameHi: 'मोटर वाइंडिंग', slug: 'motor-winding', price: 799, duration: '2-3 Days', icon: '⚙️', description: 'Electric motor winding & rewinding. All sizes.', descriptionHi: 'इलेक्ट्रिक मोटर वाइंडिंग और रिवाइंडिंग। सभी साइज।', imageUrl: 'https://iili.io/C9kJdqQ.jpg' },
-  { id: '8', name: 'Water Pump Repair', nameHi: 'पानी पम्प मरम्मत', slug: 'water-pump-repair', price: 449, duration: 'Same Day', icon: '🚰', description: 'Submersible & surface pump repair. All brands.', descriptionHi: 'सबमर्सिबल और सरफेस पम्प मरम्मत। सभी ब्रांड।', imageUrl: 'https://iili.io/C9kJHLx.jpg' },
-  { id: '9', name: 'Wiring & Fitting', nameHi: 'वायरिंग और फिटिंग', slug: 'wiring-fitting', price: 699, duration: 'Same Day', icon: '🔌', description: 'Complete home & shop electrical wiring.', descriptionHi: 'घर और दुकान की पूरी इलेक्ट्रिकल वायरिंग।', imageUrl: 'https://iili.io/C9k9f6B.jpg' },
+  { id: '1', name: 'Cooler Repair', nameHi: 'कूलर मरम्मत', slug: 'cooler-repair', price: 299, duration: 'Same Day', icon: '❄️', description: 'Professional air cooler repair & service. All brands covered.', descriptionHi: 'प्रोफेशनल एयर कूलर मरम्मत और सर्विस। सभी ब्रांड।', isFeatured: true, imageUrl: 'https://iili.io/C9eDwiP.jpg' },
+  { id: '2', name: 'Fan Repair', nameHi: 'पंखा मरम्मत', slug: 'fan-repair', price: 199, duration: 'Same Day', icon: '🌀', description: 'Ceiling, table & exhaust fan repair. Same day service.', descriptionHi: 'सीलिंग, टेबल और एग्जॉस्ट पंखा मरम्मत। उसी दिन सेवा।', isFeatured: true, imageUrl: 'https://iili.io/C9eDWDQ.jpg' },
+  { id: '3', name: 'Refrigerator Repair', nameHi: 'फ्रिज मरम्मत', slug: 'fridge-repair', price: 399, duration: '1-2 Days', icon: '🧊', description: 'All brands refrigerator repair. Gas refilling & compressor.', descriptionHi: 'सभी ब्रांड फ्रिज मरम्मत। गैस रिफिलिंग और कम्प्रेसर।', isFeatured: true, imageUrl: 'https://iili.io/C9k9mVR.jpg' },
+  { id: '4', name: 'Washing Machine Repair', nameHi: 'वाशिंग मशीन मरम्मत', slug: 'washing-machine-repair', price: 499, duration: '1-2 Days', icon: '🧺', description: 'Front load & top load washing machine repair.', descriptionHi: 'फ्रंट लोड और टॉप लोड वाशिंग मशीन मरम्मत।', isFeatured: true, imageUrl: 'https://iili.io/C9k99yu.jpg' },
+  { id: '5', name: 'Inverter Service', nameHi: 'इन्वेर्टर सर्विस', slug: 'inverter-service', price: 349, duration: 'Same Day', icon: '🔋', description: 'Inverter repair & battery service. All brands.', descriptionHi: 'इन्वेर्टर मरम्मत और बैटरी सर्विस। सभी ब्रांड।', isFeatured: true, imageUrl: 'https://images.unsplash.com/photo-1621905252507-b35492ac74e4?w=800&q=80' },
+  { id: '6', name: 'LED TV Repair', nameHi: 'LED टीवी मरम्मत', slug: 'led-tv-repair', price: 599, duration: '2-3 Days', icon: '📺', description: 'LED & Smart TV repair. Panel & board replacement.', descriptionHi: 'LED और स्मार्ट टीवी मरम्मत। पैनल और बोर्ड रिप्लेसमेंट।', imageUrl: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80' },
+  { id: '7', name: 'Motor Winding', nameHi: 'मोटर वाइंडिंग', slug: 'motor-winding', price: 799, duration: '2-3 Days', icon: '⚙️', description: 'Electric motor winding & rewinding. All sizes.', descriptionHi: 'इलेक्ट्रिक मोटर वाइंडिंग और रिवाइंडिंग। सभी साइज।', imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80' },
+  { id: '8', name: 'Water Pump Repair', nameHi: 'पानी पम्प मरम्मत', slug: 'water-pump-repair', price: 449, duration: 'Same Day', icon: '🚰', description: 'Submersible & surface pump repair. All brands.', descriptionHi: 'सबमर्सिबल और सरफेस पम्प मरम्मत। सभी ब्रांड।', imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800&q=80' },
+  { id: '9', name: 'Wiring & Fitting', nameHi: 'वायरिंग और फिटिंग', slug: 'wiring-fitting', price: 699, duration: 'Same Day', icon: '🔌', description: 'Complete home & shop electrical wiring.', descriptionHi: 'घर और दुकान की पूरी इलेक्ट्रिकल वायरिंग।', imageUrl: 'https://images.unsplash.com/photo-1558227691-41ea78a1f631?w=800&q=80' },
   { id: '10', name: 'MCB & Panel Work', nameHi: 'MCB & पैनल काम', slug: 'mcb-panel-work', price: 599, duration: 'Same Day', icon: '⚡', description: 'MCB fitting, DB panel work & safety upgrades.', descriptionHi: 'MCB फिटिंग, DB पैनल काम और सुरक्षा अपग्रेड।', imageUrl: 'https://iili.io/C9eDe0F.jpg' },
   { id: '11', name: 'Geyser Repair', nameHi: 'गीजर मरम्मत', slug: 'geyser-repair', price: 399, duration: 'Same Day', icon: '🚿', description: 'Water heater & geyser repair. Element & thermostat.', descriptionHi: 'वाटर हीटर और गीजर मरम्मत। एलिमेंट और थर्मोस्टेट।', imageUrl: 'https://iili.io/C9emoyG.jpg' },
   { id: '12', name: 'Mixer/Grinder Repair', nameHi: 'मिक्सर/चक्की मरम्मत', slug: 'mixer-repair', price: 249, duration: 'Same Day', icon: '🌀', description: 'Mixer, grinder & chakki motor repair.', descriptionHi: 'मिक्सर, ग्राइंडर और चक्की मोटर मरम्मत।', imageUrl: 'https://iili.io/C9emzuf.jpg' },
@@ -4163,18 +4163,18 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const TESTIMONIALS = [
-  { id: '1', name: 'रामचंद्र जी', location: 'जयसंगसर', review: 'Excellent service! My cooler was fixed within hours. Very professional team.', reviewHi: 'बहुत अच्छी सेवा! मेरा कूलर कुछ ही घंटों में ठीक हो गया। बहुत प्रोफेशनल टीम।', rating: 5, imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face' },
-  { id: '2', name: 'सुनीता देवी', location: 'गोमटिया', review: 'Affordable prices and great quality work. My fan works like new now!', reviewHi: 'सस्ती कीमत और बढ़िया काम। मेरा पंखा अब नया जैसा काम करता है!', rating: 5, imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face' },
-  { id: '3', name: 'मोहन लाल', location: 'सरदारशहर', review: 'Best inverter service in the area. Highly recommended!', reviewHi: 'इस इलाके में सबसे अच्छी इन्वेर्टर सेवा। जरूर सुझाऊंगा!', rating: 5, imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face' },
-  { id: '4', name: 'पूजा शर्मा', location: 'राजस्थान', review: 'Quick turnaround for washing machine repair. Very satisfied with the service.', reviewHi: 'वाशिंग मशीन मरम्मत में जल्दी सेवा। सेवा से बहुत संतुष्ट।', rating: 4, imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face' },
+  { id: '1', name: 'रामचंद्र जी', location: 'जयसंगसर', review: 'Excellent service! My cooler was fixed within hours. Very professional team.', reviewHi: 'बहुत अच्छी सेवा! मेरा कूलर कुछ ही घंटों में ठीक हो गया। बहुत प्रोफेशनल टीम।', rating: 5, imageUrl: 'https://iili.io/C9eDwiP.jpg' },
+  { id: '2', name: 'सुनीता देवी', location: 'गोमटिया', review: 'Affordable prices and great quality work. My fan works like new now!', reviewHi: 'सस्ती कीमत और बढ़िया काम। मेरा पंखा अब नया जैसा काम करता है!', rating: 5, imageUrl: 'https://iili.io/C9eDWDQ.jpg' },
+  { id: '3', name: 'मोहन लाल', location: 'सरदारशहर', review: 'Best inverter service in the area. Highly recommended!', reviewHi: 'इस इलाके में सबसे अच्छी इन्वेर्टर सेवा। जरूर सुझाऊंगा!', rating: 5, imageUrl: 'https://iili.io/C9k9mVR.jpg' },
+  { id: '4', name: 'पूजा शर्मा', location: 'राजस्थान', review: 'Quick turnaround for washing machine repair. Very satisfied with the service.', reviewHi: 'वाशिंग मशीन मरम्मत में जल्दी सेवा। सेवा से बहुत संतुष्ट।', rating: 4, imageUrl: 'https://iili.io/C9k99yu.jpg' },
   { id: '5', name: 'राजेश कुमार', location: 'जयपुर', review: 'Great deals on wholesale electronics. Best prices in town!', reviewHi: 'थोक इलेक्ट्रॉनिक्स में बढ़िया डील। शहर में सबसे अच्छी कीमतें!', rating: 5, imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face' },
 ];
 
 export const BANNERS = [
-  { id: '1', title: 'Repair Services', titleHi: 'मरम्मत सेवाएं', subtitle: 'कूलर • पंखा • फ्रिज • वाशिंग मशीन • इन्वेर्टर', imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&h=800&fit=crop', link: '/services', sortOrder: 1 },
-  { id: '2', title: 'Inverter & Battery', titleHi: 'इन्वेर्टर और बैटरी', subtitle: 'बड़ी बचत • सभी ब्रांड • थोक दरें', imageUrl: 'https://images.unsplash.com/photo-1621905252507-b35492ac74e4?w=1920&h=800&fit=crop', link: '/products?category=inverter-battery', sortOrder: 2 },
-  { id: '3', title: 'MCB & Electrical', titleHi: 'MCB & इलेक्ट्रिकल', subtitle: 'Switches • Sockets • Wiring • DB Panel', imageUrl: 'https://images.unsplash.com/photo-1558227691-41ea78a1f631?w=1920&h=800&fit=crop', link: '/products?category=mcb-db', sortOrder: 3 },
-  { id: '4', title: 'Fans & Lights', titleHi: 'पंखे और लाइटें', subtitle: 'सभी ब्रांड • थोक दर • ISI मार्क्ड', imageUrl: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&h=800&fit=crop', link: '/products?category=fan', sortOrder: 4 },
+  { id: '1', title: 'Repair Services', titleHi: 'मरम्मत सेवाएं', subtitle: 'कूलर • पंखा • फ्रिज • वाशिंग मशीन • इन्वेर्टर', imageUrl: 'https://iili.io/C9eDwiP.jpg', link: '/services', sortOrder: 1 },
+  { id: '2', title: 'Inverter & Battery', titleHi: 'इन्वेर्टर और बैटरी', subtitle: 'बड़ी बचत • सभी ब्रांड • थोक दरें', imageUrl: 'https://iili.io/C9eDWDQ.jpg', link: '/products?category=inverter-battery', sortOrder: 2 },
+  { id: '3', title: 'MCB & Electrical', titleHi: 'MCB & इलेक्ट्रिकल', subtitle: 'Switches • Sockets • Wiring • DB Panel', imageUrl: 'https://iili.io/C9k9mVR.jpg', link: '/products?category=mcb-db', sortOrder: 3 },
+  { id: '4', title: 'Fans & Lights', titleHi: 'पंखे और लाइटें', subtitle: 'सभी ब्रांड • थोक दर • ISI मार्क्ड', imageUrl: 'https://iili.io/C9k99yu.jpg', link: '/products?category=fan', sortOrder: 4 },
 ];
 
 export const BRANDS = [
@@ -4198,7 +4198,7 @@ export const CONTACTS = {
     nameEn: 'Mesh Saran',
     role: 'Electrician',
     area: 'जयसंगसर वाले',
-    phones: ['9928330252', '9929124331'],
+    phones: ['9928330252', '6350211515'],
     whatsapp: '919928330252',
   },
   pappuram: {
@@ -4206,7 +4206,7 @@ export const CONTACTS = {
     nameEn: 'Pappuram Saran',
     role: 'Shop Owner',
     area: 'गोमटिया वाले',
-    phones: ['6350211515', '8955293732'],
+    phones: ['6350211515', '6350211515'],
     whatsapp: '916350211515',
   },
 };

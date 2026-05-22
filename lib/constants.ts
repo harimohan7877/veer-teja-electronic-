@@ -4,19 +4,12 @@
 
 // Shop Contact Information
 export const SHOP_PHONES = {
-  mesh: {
-    name: 'मेश सारण',
-    nameEn: 'Mesh Saran',
-    role: 'Electrician',
-    area: 'जयसंगसर वाले',
-    phones: ['9928330252', '9929124331'],
-  },
   pappuram: {
     name: 'पप्पूराम सारण',
     nameEn: 'Pappuram Saran',
     role: 'Shop Owner',
-    area: 'गोमटिया वाले',
-    phones: ['6350211515', '8955293732'],
+    area: 'वीर तेजा इलेक्ट्रॉनिक्स',
+    phones: ['6350211515', '9928330252'],
   },
 };
 

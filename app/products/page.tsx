@@ -137,11 +137,47 @@ function ProductsContent() {
             {/* Mobile Filter Button */}
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="lg:hidden flex items-center justify-center gap-3 px-6 py-3.5 bg-white rounded-xl border-2 border-border font-black text-xs uppercase tracking-widest text-primary shadow-sm active:scale-95"
+              className="lg:hidden flex items-center justify-center gap-3 px-6 py-3.5 bg-white rounded-xl border-2 border-border font-black text-xs uppercase tracking-widest text-primary shadow-sm active:scale-95 mb-6 w-full"
             >
               <Filter className="w-4 h-4 text-secondary" />
-              Filter Products
+              Categories / Filter Products
             </button>
+
+            {showFilters && (
+              <div className="lg:hidden mb-8 bg-white rounded-2xl p-4 border border-border shadow-sm">
+                <h3 className="text-xs font-black text-primary mb-4 flex items-center gap-2 uppercase tracking-[0.2em]">
+                  <Filter className="w-4 h-4 text-secondary" />
+                  Select Category
+                </h3>
+                <div className="space-y-2">
+                  <button
+                    onClick={() => { setSelectedCategory(null); setShowFilters(false); }}
+                    className={`w-full text-left px-4 py-3 rounded-xl font-bold transition-all text-sm flex items-center gap-3 ${
+                      !selectedCategory
+                        ? 'bg-secondary text-white shadow-lg shadow-secondary/20'
+                        : 'text-text-mid hover:bg-surface hover:text-secondary'
+                    }`}
+                  >
+                    <Grid className="w-4 h-4" />
+                    <span>All Products</span>
+                  </button>
+                  {CATEGORIES.map(category => (
+                    <button
+                      key={category.id}
+                      onClick={() => { setSelectedCategory(category.slug); setShowFilters(false); }}
+                      className={`w-full text-left px-4 py-3 rounded-xl font-bold transition-all text-sm flex items-center gap-3 ${
+                        selectedCategory === category.slug
+                          ? 'bg-secondary text-white shadow-lg shadow-secondary/20'
+                          : 'text-text-mid hover:bg-surface hover:text-secondary'
+                      }`}
+                    >
+                      <span className="text-lg">{category.icon}</span>
+                      <span className="hindi-text">{category.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Products Grid */}
             <div className="flex-1">

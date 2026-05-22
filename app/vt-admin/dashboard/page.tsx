@@ -171,14 +171,14 @@ export default function DashboardPage() {
               <Phone className="w-5 h-5 opacity-80" />
               <div>
                 <p className="font-semibold">मेश सारण (जयसंगसर)</p>
-                <p className="text-blue-200 text-sm">9928330252 | 9929124331</p>
+                <p className="text-blue-200 text-sm">9928330252 | 6350211515</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 opacity-80" />
               <div>
                 <p className="font-semibold">पप्पूराम सारण (गोमटिया)</p>
-                <p className="text-blue-200 text-sm">6350211515 | 8955293732</p>
+                <p className="text-blue-200 text-sm">6350211515 | 6350211515</p>
               </div>
             </div>
           </div>
