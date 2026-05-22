@@ -17,9 +17,9 @@ export interface Category {
   icon: string;
   imageUrl?: string;
   description?: string;
-  sortOrder: number;
-  isActive: boolean;
-  createdAt: Date;
+  sortOrder?: number;
+  isActive?: boolean;
+  createdAt?: Date;
 }
 
 export interface Product {
@@ -36,15 +36,16 @@ export interface Product {
   brand?: string;
   model?: string;
   inStock: boolean;
-  isWholesale: boolean;
-  isFeatured: boolean;
-  isActive: boolean;
+  isWholesale?: boolean;
+  isFeatured?: boolean;
+  isBestSeller?: boolean;
+  isActive?: boolean;
   rating: number;
   reviewCount: number;
   categoryId: string;
-  tags: string[];
+  tags?: string[];
   specifications?: Record<string, string>;
-  createdAt: Date;
+  createdAt?: Date;
 }
 
 export interface Service {

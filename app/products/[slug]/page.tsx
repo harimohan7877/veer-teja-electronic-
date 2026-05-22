@@ -334,15 +334,16 @@ export default function ProductDetailPage() {
             </div>
           </div>
 
-          {/* Description */}
           <div className="bg-white rounded-xl shadow-sm mt-8 p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4">उत्पाद विवरण</h2>
             <p className="text-gray-600 leading-relaxed">
-              {product.nameHi} - {product.brand} का प्रीमियम उत्पाद।
-              वीर तेजा इलेक्ट्रॉनिक्स में आपको मिलता है सस्ती दरों में असली उत्पाद।
-              थोक और खुदरा दोनों उपलब्ध है। सभी उत्पादों में वारंटी कार्ड शामिल है।
-              हमारी टीम आपको बेहतरीन सर्विस प्रदान करती है।
+              {product.description || `${product.nameHi} - ${product.brand} का प्रीमियम उत्पाद। वीर तेजा इलेक्ट्रॉनिक्स में आपको मिलता है सस्ती दरों में असली उत्पाद। थोक और खुदरा दोनों उपलब्ध है।`}
             </p>
+            {product.isWholesale && (
+              <div className="mt-4 p-3 bg-blue-50 border border-blue-100 rounded-lg">
+                <p className="text-sm text-blue-700 font-medium">✅ थोक दर उपलब्ध — बड़े ऑर्डर पर विशेष छूट के लिए कॉल करें</p>
+              </div>
+            )}
           </div>
 
           {/* Related Products */}

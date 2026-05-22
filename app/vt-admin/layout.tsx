@@ -19,14 +19,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isAuthorized, setIsAuthorized] = useState(false);
+  const [adminEmail, setAdminEmail] = useState('');
 
   useEffect(() => {
     const session = localStorage.getItem('adminSession');
     if (!session) {
       router.push('/vt-admin/login');
     } else {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsAuthorized(true);
+      setAdminEmail(localStorage.getItem('adminEmail') || 'admin@veerteja.com');
     }
   }, [router]);
 
@@ -37,7 +38,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   };
 
   if (!isAuthorized) {
-    return null;
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
+          <p className="text-gray-500 text-sm">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -137,7 +145,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               View Website
             </Link>
             <span className="text-sm text-gray-500">
-              {localStorage.getItem('adminEmail')}
+              {adminEmail}
             </span>
           </div>
         </header>

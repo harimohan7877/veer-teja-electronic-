@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
         hostname: 'via.placeholder.com',
         pathname: '/**',
       },
+      {
+        // User-provided product images via iili.io CDN (freeimage.host)
+        protocol: 'https',
+        hostname: 'iili.io',
+        pathname: '/**',
+      },
     ],
   },
 };
