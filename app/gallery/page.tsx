@@ -9,18 +9,18 @@ import WhatsAppButton from '@/components/shared/WhatsAppButton';
 import BackToTop from '@/components/shared/BackToTop';
 
 const GALLERY_IMAGES = [
-  { id: 1, category: 'shop', src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop', caption: 'हमारी दुकान', captionHi: 'Our Shop' },
-  { id: 2, category: 'shop', src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=600&fit=crop', caption: 'शोरूम', captionHi: 'Showroom' },
-  { id: 3, category: 'repair', src: 'https://images.unsplash.com/photo-1585771724684-38269d7239d4?w=800&h=600&fit=crop', caption: 'मरम्मत कार्यशाला', captionHi: 'Repair Workshop' },
-  { id: 4, category: 'repair', src: 'https://images.unsplash.com/photo-1621905252507-b35492ac74e4?w=800&h=600&fit=crop', caption: 'इन्वेर्टर सर्विस', captionHi: 'Inverter Service' },
-  { id: 5, category: 'products', src: 'https://images.unsplash.com/photo-1616628188467-8fb2e5832a0e?w=800&h=600&fit=crop', caption: 'पंखा', captionHi: 'Fans' },
-  { id: 6, category: 'products', src: 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&h=600&fit=crop', caption: 'फ्रिज', captionHi: 'Refrigerators' },
-  { id: 7, category: 'products', src: 'https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=800&h=600&fit=crop', caption: 'लाइटिंग', captionHi: 'Lighting' },
-  { id: 8, category: 'products', src: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&h=600&fit=crop', caption: 'टीवी', captionHi: 'TVs' },
-  { id: 9, category: 'team', src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=600&fit=crop', caption: 'हमारी टीम', captionHi: 'Our Team' },
-  { id: 10, category: 'repair', src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop', caption: 'वाशिंग मशीन रिपेयर', captionHi: 'Washing Machine Repair' },
-  { id: 11, category: 'shop', src: 'https://images.unsplash.com/photo-1621905252507-b35492ac74e4?w=800&h=600&fit=crop', caption: 'इन्वेर्टर शोरूम', captionHi: 'Inverter Showroom' },
-  { id: 12, category: 'products', src: 'https://images.unsplash.com/photo-1619641805618-7c207c0d9e1c?w=800&h=600&fit=crop', caption: 'बैटरी', captionHi: 'Batteries' },
+  { id: 1, category: 'shop', src: 'https://iili.io/C9kH9KN.jpg', caption: 'दुकान का नजारा', captionHi: 'Shop View' },
+  { id: 2, category: 'shop', src: 'https://iili.io/C9kH2HX.jpg', caption: 'शोरूम', captionHi: 'Showroom' },
+  { id: 3, category: 'products', src: 'https://iili.io/C9eDwiP.jpg', caption: 'इलेक्ट्रिकल बॉक्स', captionHi: 'Electrical Box' },
+  { id: 4, category: 'products', src: 'https://iili.io/C9eDWDQ.jpg', caption: 'MCB', captionHi: 'Snipper Gold MCB' },
+  { id: 5, category: 'products', src: 'https://iili.io/C9k99yu.jpg', caption: 'पंखा', captionHi: 'Ceiling Fan' },
+  { id: 6, category: 'products', src: 'https://iili.io/C9eDe0F.jpg', caption: 'कंबाइंड बॉक्स', captionHi: 'Combined Box' },
+  { id: 7, category: 'products', src: 'https://iili.io/C9eDOf1.jpg', caption: 'बेड स्विच', captionHi: 'Bed Switch' },
+  { id: 8, category: 'products', src: 'https://iili.io/C9eD8Ja.jpg', caption: '2-पिन प्लग', captionHi: '2-Pin Plug' },
+  { id: 9, category: 'products', src: 'https://iili.io/C9k9mVR.jpg', caption: 'सॉकेट', captionHi: 'Electrical Sockets' },
+  { id: 10, category: 'products', src: 'https://iili.io/C9kHHlI.jpg', caption: 'वाटर कूलर', captionHi: 'Water Cooler' },
+  { id: 11, category: 'products', src: 'https://iili.io/C9kHJSt.jpg', caption: 'वाटर कूलर (Beige)', captionHi: 'Water Cooler' },
+  { id: 12, category: 'products', src: 'https://iili.io/C9kHFNs.jpg', caption: 'ऑरेंज कूलर', captionHi: 'Orange Cooler' },
 ];
 
 const CATEGORIES = [
