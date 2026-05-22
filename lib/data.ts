@@ -2204,7 +2204,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Cables that don't catch fire']
+    images: ['Cables that don\\'t catch fire']
   },
   {
     id: '137',
