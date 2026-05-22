@@ -44,7 +44,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White plastic electrical junction box with multiple outlets']
+    images: [`White plastic electrical junction box with multiple outlets`]
   },
   {
     id: '2',
@@ -60,7 +60,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Combined box with MCB, socket, and switch']
+    images: [`Combined box with MCB, socket, and switch`]
   },
   {
     id: '3',
@@ -76,7 +76,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Snipper Gold 32A Miniature Circuit Breaker']
+    images: [`Snipper Gold 32A Miniature Circuit Breaker`]
   },
   {
     id: '4',
@@ -92,7 +92,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Snipper Gold Classy Bed Switch for bedside lamps']
+    images: [`Snipper Gold Classy Bed Switch for bedside lamps`]
   },
   {
     id: '5',
@@ -108,7 +108,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['Two-pin electrical plug for Indian sockets']
+    images: [`Two-pin electrical plug for Indian sockets`]
   },
   {
     id: '6',
@@ -124,7 +124,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White plastic box for mounting electrical switches']
+    images: [`White plastic box for mounting electrical switches`]
   },
   {
     id: '7',
@@ -140,7 +140,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['Variety of colored two-pin electrical plugs']
+    images: [`Variety of colored two-pin electrical plugs`]
   },
   {
     id: '8',
@@ -156,7 +156,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Assortment of switches, sockets, and modular plates']
+    images: [`Assortment of switches, sockets, and modular plates`]
   },
   {
     id: '9',
@@ -172,7 +172,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['Electrical power outlet with screw terminals']
+    images: [`Electrical power outlet with screw terminals`]
   },
   {
     id: '10',
@@ -188,7 +188,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹400',
-    images: ['Snipper Gold DP Isolator C40 and C63']
+    images: [`Snipper Gold DP Isolator C40 and C63`]
   },
   {
     id: '11',
@@ -204,7 +204,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White bulb holder with red interior']
+    images: [`White bulb holder with red interior`]
   },
   {
     id: '12',
@@ -220,7 +220,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['Collection of different types of bulb holders']
+    images: [`Collection of different types of bulb holders`]
   },
   {
     id: '13',
@@ -236,7 +236,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Modular electrical switches and accessories']
+    images: [`Modular electrical switches and accessories`]
   },
   {
     id: '14',
@@ -252,7 +252,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Universal travel adapter']
+    images: [`Universal travel adapter`]
   },
   {
     id: '15',
@@ -268,7 +268,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['Electrical switch and socket combination']
+    images: [`Electrical switch and socket combination`]
   },
   {
     id: '16',
@@ -284,7 +284,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Modular electrical sockets']
+    images: [`Modular electrical sockets`]
   },
   {
     id: '17',
@@ -300,7 +300,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White pendant switch for electrical applications']
+    images: [`White pendant switch for electrical applications`]
   },
   {
     id: '18',
@@ -316,7 +316,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹40',
-    images: ['White bulb holder for ceiling or wall mount']
+    images: [`White bulb holder for ceiling or wall mount`]
   },
   {
     id: '19',
@@ -332,7 +332,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White angle bulb holder with colored interior']
+    images: [`White angle bulb holder with colored interior`]
   },
   {
     id: '20',
@@ -348,7 +348,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['6amp combined box with switch and socket']
+    images: [`6amp combined box with switch and socket`]
   },
   {
     id: '21',
@@ -364,7 +364,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White bulb holder for ceiling or wall mounting']
+    images: [`White bulb holder for ceiling or wall mounting`]
   },
   {
     id: '22',
@@ -380,7 +380,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['White plastic switch box for electrical fittings']
+    images: [`White plastic switch box for electrical fittings`]
   },
   {
     id: '23',
@@ -396,7 +396,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['White switch board with switches and sockets']
+    images: [`White switch board with switches and sockets`]
   },
   {
     id: '24',
@@ -412,7 +412,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹60',
-    images: ['Square white bulb holder for electrical connections']
+    images: [`Square white bulb holder for electrical connections`]
   },
   {
     id: '25',
@@ -428,7 +428,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹500',
-    images: ['White modular switchboard with multiple sockets and switches']
+    images: [`White modular switchboard with multiple sockets and switches`]
   },
   {
     id: '26',
@@ -444,7 +444,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White 3-pin plug for electrical appliances']
+    images: [`White 3-pin plug for electrical appliances`]
   },
   {
     id: '27',
@@ -460,7 +460,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White multi-plug adapter with multiple sockets']
+    images: [`White multi-plug adapter with multiple sockets`]
   },
   {
     id: '28',
@@ -476,7 +476,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White Snipper Gold electrical socket with ISI mark']
+    images: [`White Snipper Gold electrical socket with ISI mark`]
   },
   {
     id: '29',
@@ -492,7 +492,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White 3-pin plug for Indian electrical outlets']
+    images: [`White 3-pin plug for Indian electrical outlets`]
   },
   {
     id: '30',
@@ -508,7 +508,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White bulb holder with red interior']
+    images: [`White bulb holder with red interior`]
   },
   {
     id: '31',
@@ -524,7 +524,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['Assortment of white electrical switches and socket']
+    images: [`Assortment of white electrical switches and socket`]
   },
   {
     id: '32',
@@ -540,7 +540,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Back view of electrical switches and socket']
+    images: [`Back view of electrical switches and socket`]
   },
   {
     id: '33',
@@ -556,7 +556,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['Two 16A switches and a universal socket']
+    images: [`Two 16A switches and a universal socket`]
   },
   {
     id: '34',
@@ -572,7 +572,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹300',
-    images: ['Single switch and a 3-pin socket']
+    images: [`Single switch and a 3-pin socket`]
   },
   {
     id: '35',
@@ -588,7 +588,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['Universal socket and two switches']
+    images: [`Universal socket and two switches`]
   },
   {
     id: '36',
@@ -604,7 +604,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹300',
-    images: ['Doorbell and a socket']
+    images: [`Doorbell and a socket`]
   },
   {
     id: '37',
@@ -620,7 +620,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['32A, 240V AC, 50Hz, C-32, Snapper Gold']
+    images: [`32A, 240V AC, 50Hz, C-32, Snapper Gold`]
   },
   {
     id: '38',
@@ -636,7 +636,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White electrical switch with silver accent']
+    images: [`White electrical switch with silver accent`]
   },
   {
     id: '39',
@@ -652,7 +652,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Two white switches on a single plate']
+    images: [`Two white switches on a single plate`]
   },
   {
     id: '40',
@@ -668,7 +668,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Coaxial socket and power socket on plate']
+    images: [`Coaxial socket and power socket on plate`]
   },
   {
     id: '41',
@@ -684,7 +684,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['Blue 2-pin plug for Indian electrical outlets']
+    images: [`Blue 2-pin plug for Indian electrical outlets`]
   },
   {
     id: '42',
@@ -700,7 +700,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['White multi-socket box with switches']
+    images: [`White multi-socket box with switches`]
   },
   {
     id: '43',
@@ -716,7 +716,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹120',
-    images: ['White fan speed regulator with 0-4 settings']
+    images: [`White fan speed regulator with 0-4 settings`]
   },
   {
     id: '44',
@@ -732,7 +732,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White circular fan canopy for ceiling fans']
+    images: [`White circular fan canopy for ceiling fans`]
   },
   {
     id: '45',
@@ -748,7 +748,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White plastic switchboard box with two slots.']
+    images: [`White plastic switchboard box with two slots.`]
   },
   {
     id: '46',
@@ -764,7 +764,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹40',
-    images: ['White 16 Ampere electrical switch.']
+    images: [`White 16 Ampere electrical switch.`]
   },
   {
     id: '47',
@@ -780,7 +780,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['Snipper Gold multi-pin electrical plug adapter.']
+    images: [`Snipper Gold multi-pin electrical plug adapter.`]
   },
   {
     id: '48',
@@ -796,7 +796,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹60',
-    images: ['Heavy duty indicator with red light.']
+    images: [`Heavy duty indicator with red light.`]
   },
   {
     id: '49',
@@ -812,7 +812,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White plastic electrical switch plate with multiple slots']
+    images: [`White plastic electrical switch plate with multiple slots`]
   },
   {
     id: '50',
@@ -828,7 +828,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White plastic electrical junction box with mounting posts']
+    images: [`White plastic electrical junction box with mounting posts`]
   },
   {
     id: '51',
@@ -844,7 +844,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White plastic electrical conduit box']
+    images: [`White plastic electrical conduit box`]
   },
   {
     id: '52',
@@ -860,7 +860,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White plastic electrical gang box, single and double']
+    images: [`White plastic electrical gang box, single and double`]
   },
   {
     id: '53',
@@ -876,7 +876,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White modular switch with three switches']
+    images: [`White modular switch with three switches`]
   },
   {
     id: '54',
@@ -892,7 +892,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['Various white electrical switch and socket boards']
+    images: [`Various white electrical switch and socket boards`]
   },
   {
     id: '55',
@@ -908,7 +908,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹100',
-    images: ['Brown wooden switch plate with silver frame']
+    images: [`Brown wooden switch plate with silver frame`]
   },
   {
     id: '56',
@@ -924,7 +924,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White plastic modular switch boxes of various sizes']
+    images: [`White plastic modular switch boxes of various sizes`]
   },
   {
     id: '57',
@@ -940,7 +940,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical switch for controlling power flow']
+    images: [`Electrical switch for controlling power flow`]
   },
   {
     id: '58',
@@ -956,7 +956,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical socket with multiple plug options']
+    images: [`Electrical socket with multiple plug options`]
   },
   {
     id: '59',
@@ -972,7 +972,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Device to hold and connect a lamp']
+    images: [`Device to hold and connect a lamp`]
   },
   {
     id: '60',
@@ -988,7 +988,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Connector to connect electrical devices to power']
+    images: [`Connector to connect electrical devices to power`]
   },
   {
     id: '61',
@@ -1004,7 +1004,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['White electrical switch for home wiring']
+    images: [`White electrical switch for home wiring`]
   },
   {
     id: '62',
@@ -1020,7 +1020,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Snipper Gold 6A 240V AC 3 Pin Top']
+    images: [`Snipper Gold 6A 240V AC 3 Pin Top`]
   },
   {
     id: '63',
@@ -1036,7 +1036,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White 3 pin plug for electrical appliances']
+    images: [`White 3 pin plug for electrical appliances`]
   },
   {
     id: '64',
@@ -1052,7 +1052,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Snipper Gold 2m Bell push with indicator']
+    images: [`Snipper Gold 2m Bell push with indicator`]
   },
   {
     id: '65',
@@ -1068,7 +1068,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Combined box with MCB for electrical connections']
+    images: [`Combined box with MCB for electrical connections`]
   },
   {
     id: '66',
@@ -1084,7 +1084,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White electrical socket and switch combination']
+    images: [`White electrical socket and switch combination`]
   },
   {
     id: '67',
@@ -1100,7 +1100,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['32A DP electrical switch for power control']
+    images: [`32A DP electrical switch for power control`]
   },
   {
     id: '68',
@@ -1116,7 +1116,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White electrical switch boxes for housing switches']
+    images: [`White electrical switch boxes for housing switches`]
   },
   {
     id: '69',
@@ -1132,7 +1132,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical transformer for voltage conversion']
+    images: [`Electrical transformer for voltage conversion`]
   },
   {
     id: '70',
@@ -1148,7 +1148,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['Two-pin electrical plug for appliances']
+    images: [`Two-pin electrical plug for appliances`]
   },
   {
     id: '71',
@@ -1164,7 +1164,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['Ceiling mounted bulb holder']
+    images: [`Ceiling mounted bulb holder`]
   },
   {
     id: '72',
@@ -1180,7 +1180,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['Electrical socket with on/off switch']
+    images: [`Electrical socket with on/off switch`]
   },
   {
     id: '73',
@@ -1196,7 +1196,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['6A, 240V AC Polycarbonate 3 Pin Top']
+    images: [`6A, 240V AC Polycarbonate 3 Pin Top`]
   },
   {
     id: '74',
@@ -1212,7 +1212,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['Heavy Duty 32AMP-250V Snipper Gold Switch']
+    images: [`Heavy Duty 32AMP-250V Snipper Gold Switch`]
   },
   {
     id: '75',
@@ -1228,7 +1228,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['White Light Switch']
+    images: [`White Light Switch`]
   },
   {
     id: '76',
@@ -1244,7 +1244,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹40',
-    images: ['White Ceiling Rose']
+    images: [`White Ceiling Rose`]
   },
   {
     id: '77',
@@ -1260,7 +1260,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['Electrical outlet for modular switchboard']
+    images: [`Electrical outlet for modular switchboard`]
   },
   {
     id: '78',
@@ -1276,7 +1276,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['Snipper Gold modular switchboard with three switches']
+    images: [`Snipper Gold modular switchboard with three switches`]
   },
   {
     id: '79',
@@ -1292,7 +1292,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['Black bulb holder with brass contact']
+    images: [`Black bulb holder with brass contact`]
   },
   {
     id: '80',
@@ -1308,7 +1308,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['White modular switch for electrical circuits']
+    images: [`White modular switch for electrical circuits`]
   },
   {
     id: '81',
@@ -1324,7 +1324,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White 5 pin socket with attached switch']
+    images: [`White 5 pin socket with attached switch`]
   },
   {
     id: '82',
@@ -1340,7 +1340,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹120',
-    images: ['White 5 pin electrical socket']
+    images: [`White 5 pin electrical socket`]
   },
   {
     id: '83',
@@ -1356,7 +1356,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['White bulb holder with red interior']
+    images: [`White bulb holder with red interior`]
   },
   {
     id: '84',
@@ -1372,7 +1372,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹100',
-    images: ['White electrical switch 25A and 40A D.P.']
+    images: [`White electrical switch 25A and 40A D.P.`]
   },
   {
     id: '85',
@@ -1388,7 +1388,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Classy bed switch with quality assurance']
+    images: [`Classy bed switch with quality assurance`]
   },
   {
     id: '86',
@@ -1404,7 +1404,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Fan speed controller with multiple settings']
+    images: [`Fan speed controller with multiple settings`]
   },
   {
     id: '87',
@@ -1420,7 +1420,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['25A motor starter with on/off switch']
+    images: [`25A motor starter with on/off switch`]
   },
   {
     id: '88',
@@ -1436,7 +1436,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White plastic electrical switch box']
+    images: [`White plastic electrical switch box`]
   },
   {
     id: '89',
@@ -1452,7 +1452,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['White modular switch for electrical installations']
+    images: [`White modular switch for electrical installations`]
   },
   {
     id: '90',
@@ -1468,7 +1468,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['Various types of electrical plugs and sockets']
+    images: [`Various types of electrical plugs and sockets`]
   },
   {
     id: '91',
@@ -1484,7 +1484,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White 18 module electrical switch plate']
+    images: [`White 18 module electrical switch plate`]
   },
   {
     id: '92',
@@ -1500,7 +1500,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White modular gang box for electrical switches']
+    images: [`White modular gang box for electrical switches`]
   },
   {
     id: '93',
@@ -1516,7 +1516,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50-₹500',
-    images: ['Various electrical switches and sockets for home use']
+    images: [`Various electrical switches and sockets for home use`]
   },
   {
     id: '94',
@@ -1532,7 +1532,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Industrial air cooler with digital display']
+    images: [`Industrial air cooler with digital display`]
   },
   {
     id: '95',
@@ -1548,7 +1548,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Stainless steel industrial air cooler']
+    images: [`Stainless steel industrial air cooler`]
   },
   {
     id: '96',
@@ -1564,7 +1564,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Industrial air cooler on a stainless steel table']
+    images: [`Industrial air cooler on a stainless steel table`]
   },
   {
     id: '97',
@@ -1580,7 +1580,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Stainless steel air cooler for industrial use']
+    images: [`Stainless steel air cooler for industrial use`]
   },
   {
     id: '98',
@@ -1596,7 +1596,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['150W LED flood light with IP66 rating']
+    images: [`150W LED flood light with IP66 rating`]
   },
   {
     id: '99',
@@ -1612,7 +1612,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['90 Litres capacity air cooler with honey pad']
+    images: [`90 Litres capacity air cooler with honey pad`]
   },
   {
     id: '100',
@@ -1628,7 +1628,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['90 Litres capacity air cooler with grass pad']
+    images: [`90 Litres capacity air cooler with grass pad`]
   },
   {
     id: '101',
@@ -1644,7 +1644,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['90 Litres, 1 1/4 Cop. Baring Motor, 17 CRC Blade']
+    images: [`90 Litres, 1 1/4 Cop. Baring Motor, 17 CRC Blade`]
   },
   {
     id: '102',
@@ -1660,7 +1660,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['90 Litres, 1/4 Cop. Baring Motor, 18" Climatizer Blade']
+    images: [`90 Litres, 1/4 Cop. Baring Motor, 18" Climatizer Blade`]
   },
   {
     id: '103',
@@ -1676,7 +1676,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['80 Litres, 1/4 Cop. Baring Motor, 18" Climatizer Blade']
+    images: [`80 Litres, 1/4 Cop. Baring Motor, 18" Climatizer Blade`]
   },
   {
     id: '104',
@@ -1692,7 +1692,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['90 Litres, 1/10 Alu. Baring Motor, 15" CRC Blade']
+    images: [`90 Litres, 1/10 Alu. Baring Motor, 15" CRC Blade`]
   },
   {
     id: '105',
@@ -1708,7 +1708,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['100 Litres Capacity, Honeypad, 15" CRC Blade']
+    images: [`100 Litres Capacity, Honeypad, 15" CRC Blade`]
   },
   {
     id: '106',
@@ -1724,7 +1724,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['150 Litres Capacity, Honeypad, 20" Climatizer Blade']
+    images: [`150 Litres Capacity, Honeypad, 20" Climatizer Blade`]
   },
   {
     id: '107',
@@ -1740,7 +1740,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['70 Litres Capacity, 15" CRC Blade, 18 Watt Pump']
+    images: [`70 Litres Capacity, 15" CRC Blade, 18 Watt Pump`]
   },
   {
     id: '108',
@@ -1756,7 +1756,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['50 Litres Capacity, Honeypad, Swing, Blower, 12 Watt Pump']
+    images: [`50 Litres Capacity, Honeypad, Swing, Blower, 12 Watt Pump`]
   },
   {
     id: '109',
@@ -1772,7 +1772,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['90 Litres Capacity, Honeypad, 1/10 Aluminum Motor']
+    images: [`90 Litres Capacity, Honeypad, 1/10 Aluminum Motor`]
   },
   {
     id: '110',
@@ -1788,7 +1788,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['20 Litres Capacity, Honeypad, Blower, Swing']
+    images: [`20 Litres Capacity, Honeypad, Blower, Swing`]
   },
   {
     id: '111',
@@ -1804,7 +1804,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['90 Litres Capacity, 1 1/2 Cop. Baring Motor']
+    images: [`90 Litres Capacity, 1 1/2 Cop. Baring Motor`]
   },
   {
     id: '112',
@@ -1820,7 +1820,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['90 Litres Capacity, 1 1/2 Cop. Baring Motor']
+    images: [`90 Litres Capacity, 1 1/2 Cop. Baring Motor`]
   },
   {
     id: '113',
@@ -1836,7 +1836,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['60 Litres Capacity, 2 Season Motor Guarantee']
+    images: [`60 Litres Capacity, 2 Season Motor Guarantee`]
   },
   {
     id: '114',
@@ -1852,7 +1852,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['60 Litres Capacity, 2 Season Motor Guarantee']
+    images: [`60 Litres Capacity, 2 Season Motor Guarantee`]
   },
   {
     id: '115',
@@ -1868,7 +1868,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Multiple colors available, wrapped in plastic']
+    images: [`Multiple colors available, wrapped in plastic`]
   },
   {
     id: '116',
@@ -1884,7 +1884,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Blue color, wrapped in plastic']
+    images: [`Blue color, wrapped in plastic`]
   },
   {
     id: '117',
@@ -1900,7 +1900,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹6000',
-    images: ['White Hind Air Cooler with wheels']
+    images: [`White Hind Air Cooler with wheels`]
   },
   {
     id: '118',
@@ -1916,7 +1916,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹6500',
-    images: ['Blue Hind Air Cooler with wheels']
+    images: [`Blue Hind Air Cooler with wheels`]
   },
   {
     id: '119',
@@ -1932,7 +1932,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹6200',
-    images: ['White Hind Air Cooler packed']
+    images: [`White Hind Air Cooler packed`]
   },
   {
     id: '120',
@@ -1948,7 +1948,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹6300',
-    images: ['Beige Hind Air Cooler packed']
+    images: [`Beige Hind Air Cooler packed`]
   },
   {
     id: '121',
@@ -1964,7 +1964,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹7,000',
-    images: ['White air cooler with black fan grill']
+    images: [`White air cooler with black fan grill`]
   },
   {
     id: '122',
@@ -1980,7 +1980,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹6,500',
-    images: ['Blue air cooler with white fan blades']
+    images: [`Blue air cooler with white fan blades`]
   },
   {
     id: '123',
@@ -1996,7 +1996,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹7,000',
-    images: ['Beige air cooler with black fan blades']
+    images: [`Beige air cooler with black fan blades`]
   },
   {
     id: '124',
@@ -2012,7 +2012,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹7,000',
-    images: ['White air cooler with red accents']
+    images: [`White air cooler with red accents`]
   },
   {
     id: '125',
@@ -2028,7 +2028,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White air cooler with wheels']
+    images: [`White air cooler with wheels`]
   },
   {
     id: '126',
@@ -2044,7 +2044,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White air cooler with cooling pads']
+    images: [`White air cooler with cooling pads`]
   },
   {
     id: '127',
@@ -2060,7 +2060,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White air cooler with honeycomb cooling pads']
+    images: [`White air cooler with honeycomb cooling pads`]
   },
   {
     id: '128',
@@ -2076,7 +2076,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White air cooler with honeycomb cooling pads']
+    images: [`White air cooler with honeycomb cooling pads`]
   },
   {
     id: '129',
@@ -2092,7 +2092,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['2.5 Sq.mm, 3 Cables, 90m Length']
+    images: [`2.5 Sq.mm, 3 Cables, 90m Length`]
   },
   {
     id: '130',
@@ -2108,7 +2108,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Flame Retardant (FR) PVC Insulated Industrial Cables']
+    images: [`Flame Retardant (FR) PVC Insulated Industrial Cables`]
   },
   {
     id: '131',
@@ -2124,7 +2124,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['1.0 Sq.mm']
+    images: [`1.0 Sq.mm`]
   },
   {
     id: '132',
@@ -2140,7 +2140,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['FR-PVC with 105°C base insulation']
+    images: [`FR-PVC with 105°C base insulation`]
   },
   {
     id: '133',
@@ -2156,7 +2156,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['1.0 sq. mm Genuine FR PVC Multi-Strand Cables']
+    images: [`1.0 sq. mm Genuine FR PVC Multi-Strand Cables`]
   },
   {
     id: '134',
@@ -2172,7 +2172,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['2.5 sq mm Insulated Industrial Cables']
+    images: [`2.5 sq mm Insulated Industrial Cables`]
   },
   {
     id: '135',
@@ -2188,7 +2188,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Securexza PVC Insulated Copper Conductor']
+    images: [`Securexza PVC Insulated Copper Conductor`]
   },
   {
     id: '136',
@@ -2204,7 +2204,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Cables that don\\'t catch fire']
+    images: [`Cables that don't catch fire`]
   },
   {
     id: '137',
@@ -2220,7 +2220,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical wire for household and industrial use']
+    images: [`Electrical wire for household and industrial use`]
   },
   {
     id: '138',
@@ -2236,7 +2236,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Flame retardant electrical wire for safety']
+    images: [`Flame retardant electrical wire for safety`]
   },
   {
     id: '139',
@@ -2252,7 +2252,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['High-quality electrical wire for various applications']
+    images: [`High-quality electrical wire for various applications`]
   },
   {
     id: '140',
@@ -2268,7 +2268,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['PVC insulated industrial cable with flame retardant properties']
+    images: [`PVC insulated industrial cable with flame retardant properties`]
   },
   {
     id: '141',
@@ -2284,7 +2284,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['PVC insulated industrial cables by Panasonic']
+    images: [`PVC insulated industrial cables by Panasonic`]
   },
   {
     id: '142',
@@ -2300,7 +2300,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹2115.00',
-    images: ['Eco safe wires, 3 layered, 90m length']
+    images: [`Eco safe wires, 3 layered, 90m length`]
   },
   {
     id: '143',
@@ -2316,7 +2316,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['PVC insulated industrial cables by Panasonic']
+    images: [`PVC insulated industrial cables by Panasonic`]
   },
   {
     id: '144',
@@ -2332,7 +2332,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['PVC insulated industrial cables by Polycab']
+    images: [`PVC insulated industrial cables by Polycab`]
   },
   {
     id: '145',
@@ -2348,7 +2348,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Polycab Optima wire of different sizes']
+    images: [`Polycab Optima wire of different sizes`]
   },
   {
     id: '146',
@@ -2364,7 +2364,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Finolex FR PVC insulated industrial cables']
+    images: [`Finolex FR PVC insulated industrial cables`]
   },
   {
     id: '147',
@@ -2380,7 +2380,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Greatwhite FR-PVC insulated industrial cable']
+    images: [`Greatwhite FR-PVC insulated industrial cable`]
   },
   {
     id: '148',
@@ -2396,7 +2396,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['RR Kabel wire of different sizes']
+    images: [`RR Kabel wire of different sizes`]
   },
   {
     id: '149',
@@ -2412,7 +2412,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical wire for home and industrial use']
+    images: [`Electrical wire for home and industrial use`]
   },
   {
     id: '150',
@@ -2428,7 +2428,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical fitting for ceiling light connection']
+    images: [`Electrical fitting for ceiling light connection`]
   },
   {
     id: '151',
@@ -2444,7 +2444,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical fitting for holding light bulbs']
+    images: [`Electrical fitting for holding light bulbs`]
   },
   {
     id: '152',
@@ -2460,7 +2460,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Election card, Aadhar card, PAN card']
+    images: [`Election card, Aadhar card, PAN card`]
   },
   {
     id: '153',
@@ -2476,7 +2476,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['Alkaline water purifier with hot water and copper']
+    images: [`Alkaline water purifier with hot water and copper`]
   },
   {
     id: '154',
@@ -2492,7 +2492,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['BLDC Technology, 5 Star Rated, Made in India']
+    images: [`BLDC Technology, 5 Star Rated, Made in India`]
   },
   {
     id: '155',
@@ -2508,7 +2508,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['BLDC Technology, 5 Star Rated, Made in India']
+    images: [`BLDC Technology, 5 Star Rated, Made in India`]
   },
   {
     id: '156',
@@ -2524,7 +2524,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['White ceiling fan, 3 years warranty, Made in India']
+    images: [`White ceiling fan, 3 years warranty, Made in India`]
   },
   {
     id: '157',
@@ -2540,7 +2540,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹2500',
-    images: ['Jaguar Luker ceiling fan with 2 year warranty']
+    images: [`Jaguar Luker ceiling fan with 2 year warranty`]
   },
   {
     id: '158',
@@ -2556,7 +2556,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹15000',
-    images: ['Daewoo Kyong Alkaline Water Purifier with Copper']
+    images: [`Daewoo Kyong Alkaline Water Purifier with Copper`]
   },
   {
     id: '159',
@@ -2572,7 +2572,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹3000',
-    images: ['Black ceiling fan with decorative ceiling design']
+    images: [`Black ceiling fan with decorative ceiling design`]
   },
   {
     id: '160',
@@ -2588,7 +2588,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹3500',
-    images: ['Luker Crown BLDC ceiling fan with 3 year warranty']
+    images: [`Luker Crown BLDC ceiling fan with 3 year warranty`]
   },
   {
     id: '161',
@@ -2604,7 +2604,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1200',
-    images: ['12 inch table fan for shop, showroom, kitchen']
+    images: [`12 inch table fan for shop, showroom, kitchen`]
   },
   {
     id: '162',
@@ -2620,7 +2620,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1100',
-    images: ['12 inch table fan with superior grade electric steel']
+    images: [`12 inch table fan with superior grade electric steel`]
   },
   {
     id: '163',
@@ -2636,7 +2636,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1000',
-    images: ['Table fan with plastic cover']
+    images: [`Table fan with plastic cover`]
   },
   {
     id: '164',
@@ -2652,7 +2652,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Black plastic fan blades']
+    images: [`Black plastic fan blades`]
   },
   {
     id: '165',
@@ -2668,7 +2668,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹800',
-    images: ['Grey cooler motor with wires']
+    images: [`Grey cooler motor with wires`]
   },
   {
     id: '166',
@@ -2684,7 +2684,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['Stack of white plastic fan blades']
+    images: [`Stack of white plastic fan blades`]
   },
   {
     id: '167',
@@ -2700,7 +2700,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['Grey plastic fan blades']
+    images: [`Grey plastic fan blades`]
   },
   {
     id: '168',
@@ -2716,7 +2716,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1500',
-    images: ['Major Power High Speed Ceiling Fan']
+    images: [`Major Power High Speed Ceiling Fan`]
   },
   {
     id: '169',
@@ -2732,7 +2732,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1500',
-    images: ['White and maroon Casta brand standing fan']
+    images: [`White and maroon Casta brand standing fan`]
   },
   {
     id: '170',
@@ -2748,7 +2748,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1500',
-    images: ['White and maroon Casta brand standing fan']
+    images: [`White and maroon Casta brand standing fan`]
   },
   {
     id: '171',
@@ -2764,7 +2764,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['Coil of pink Winner brand PVC pipe']
+    images: [`Coil of pink Winner brand PVC pipe`]
   },
   {
     id: '172',
@@ -2780,7 +2780,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['Box of Khaitan premium wires and cables']
+    images: [`Box of Khaitan premium wires and cables`]
   },
   {
     id: '173',
@@ -2796,7 +2796,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['Energy efficient, high quality wires and cables']
+    images: [`Energy efficient, high quality wires and cables`]
   },
   {
     id: '174',
@@ -2812,7 +2812,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['Trust naam mein, perfect kaam mein, copper']
+    images: [`Trust naam mein, perfect kaam mein, copper`]
   },
   {
     id: '175',
@@ -2828,7 +2828,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['Smart choice begins here, 24x7 protection']
+    images: [`Smart choice begins here, 24x7 protection`]
   },
   {
     id: '176',
@@ -2844,7 +2844,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹Unavailable',
-    images: ['16A multi socket with 25A MCB combined switch']
+    images: [`16A multi socket with 25A MCB combined switch`]
   },
   {
     id: '177',
@@ -2860,7 +2860,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['6/16A, 240V A.C. ONLY, Quality Redefines']
+    images: [`6/16A, 240V A.C. ONLY, Quality Redefines`]
   },
   {
     id: '179',
@@ -2876,7 +2876,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White plastic electrical switchboard surface box']
+    images: [`White plastic electrical switchboard surface box`]
   },
   {
     id: '180',
@@ -2892,7 +2892,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White plastic electrical switchboard surface box']
+    images: [`White plastic electrical switchboard surface box`]
   },
   {
     id: '181',
@@ -2908,7 +2908,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹5000',
-    images: ['Blue air cooler on a cardboard box']
+    images: [`Blue air cooler on a cardboard box`]
   },
   {
     id: '182',
@@ -2924,7 +2924,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹500',
-    images: ['Motor for air cooler with Sparrow Capacitors box']
+    images: [`Motor for air cooler with Sparrow Capacitors box`]
   },
   {
     id: '183',
@@ -2940,7 +2940,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹300',
-    images: ['S.S. Combined with Box 6A 250 Volts ac.']
+    images: [`S.S. Combined with Box 6A 250 Volts ac.`]
   },
   {
     id: '184',
@@ -2956,7 +2956,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White electrical socket with multiple holes']
+    images: [`White electrical socket with multiple holes`]
   },
   {
     id: '185',
@@ -2972,7 +2972,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['6A, 250 Volts AC Double Combined']
+    images: [`6A, 250 Volts AC Double Combined`]
   },
   {
     id: '186',
@@ -2988,7 +2988,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White modular plate with black inserts']
+    images: [`White modular plate with black inserts`]
   },
   {
     id: '187',
@@ -3004,7 +3004,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White electrical box with brass inserts']
+    images: [`White electrical box with brass inserts`]
   },
   {
     id: '188',
@@ -3020,7 +3020,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White 6M modular plate']
+    images: [`White 6M modular plate`]
   },
   {
     id: '189',
@@ -3036,7 +3036,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['Square shaped, orange and white plastic electrical box']
+    images: [`Square shaped, orange and white plastic electrical box`]
   },
   {
     id: '190',
@@ -3052,7 +3052,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['Various colors of electrical insulation tape in basket']
+    images: [`Various colors of electrical insulation tape in basket`]
   },
   {
     id: '191',
@@ -3068,7 +3068,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1500',
-    images: ['6.0 sq.mm, 220/440 V, Red color']
+    images: [`6.0 sq.mm, 220/440 V, Red color`]
   },
   {
     id: '192',
@@ -3084,7 +3084,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹120',
-    images: ['White Radion brand electrical sockets, different amp ratings']
+    images: [`White Radion brand electrical sockets, different amp ratings`]
   },
   {
     id: '192',
@@ -3100,7 +3100,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹120',
-    images: ['White Radion brand electrical sockets, different amp ratings']
+    images: [`White Radion brand electrical sockets, different amp ratings`]
   },
   {
     id: '193',
@@ -3116,7 +3116,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Modular Accessories for electrical fittings']
+    images: [`Modular Accessories for electrical fittings`]
   },
   {
     id: '194',
@@ -3132,7 +3132,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Pink water cooler for cold water storage']
+    images: [`Pink water cooler for cold water storage`]
   },
   {
     id: '195',
@@ -3148,7 +3148,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Blue water cooler with cool control system']
+    images: [`Blue water cooler with cool control system`]
   },
   {
     id: '196',
@@ -3164,7 +3164,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Beige water cooler with cool control system']
+    images: [`Beige water cooler with cool control system`]
   },
   {
     id: '197',
@@ -3180,7 +3180,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1200',
-    images: ['Orange water cooler with ice cube design']
+    images: [`Orange water cooler with ice cube design`]
   },
   {
     id: '198',
@@ -3196,7 +3196,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1200',
-    images: ['Green water cooler with ice cube design']
+    images: [`Green water cooler with ice cube design`]
   },
   {
     id: '199',
@@ -3212,7 +3212,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Grey and black water cooler with tap']
+    images: [`Grey and black water cooler with tap`]
   },
   {
     id: '200',
@@ -3228,7 +3228,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Orange and black water cooler with tap']
+    images: [`Orange and black water cooler with tap`]
   },
   {
     id: '201',
@@ -3244,7 +3244,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Orange Panara water cooler for cold water storage']
+    images: [`Orange Panara water cooler for cold water storage`]
   },
   {
     id: '202',
@@ -3260,7 +3260,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['8.5uF 440V capacitor for electrical appliances']
+    images: [`8.5uF 440V capacitor for electrical appliances`]
   },
   {
     id: '203',
@@ -3276,7 +3276,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹9999',
-    images: ['300 DOM Bulb, MegaFon, Inverter, Cycle combo offer']
+    images: [`300 DOM Bulb, MegaFon, Inverter, Cycle combo offer`]
   },
   {
     id: '204',
@@ -3292,7 +3292,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹750',
-    images: ['MZ M982 LED flashlight with orange case']
+    images: [`MZ M982 LED flashlight with orange case`]
   },
   {
     id: '205',
@@ -3308,7 +3308,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['0.5W LED Plug & Play Night Lamp']
+    images: [`0.5W LED Plug & Play Night Lamp`]
   },
   {
     id: '206',
@@ -3324,7 +3324,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['0.5W LED Plug & Play Night Lamp']
+    images: [`0.5W LED Plug & Play Night Lamp`]
   },
   {
     id: '207',
@@ -3340,7 +3340,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹65',
-    images: ['15W Crystal White 6500K 1500 LUMENS']
+    images: [`15W Crystal White 6500K 1500 LUMENS`]
   },
   {
     id: '208',
@@ -3356,7 +3356,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹130',
-    images: ['15/18W Inverter Bulb AC/DC Bulb']
+    images: [`15/18W Inverter Bulb AC/DC Bulb`]
   },
   {
     id: '209',
@@ -3372,7 +3372,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['9W LED bulb made in India']
+    images: [`9W LED bulb made in India`]
   },
   {
     id: '210',
@@ -3388,7 +3388,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['0.5W LED bulb, plug and play']
+    images: [`0.5W LED bulb, plug and play`]
   },
   {
     id: '211',
@@ -3404,7 +3404,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹200',
-    images: ['Whole new generation of 3D lamp']
+    images: [`Whole new generation of 3D lamp`]
   },
   {
     id: '212',
@@ -3420,7 +3420,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White electrical switchboard with switches and sockets']
+    images: [`White electrical switchboard with switches and sockets`]
   },
   {
     id: '213',
@@ -3436,7 +3436,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹500',
-    images: ['White modular switchboard with socket and switches']
+    images: [`White modular switchboard with socket and switches`]
   },
   {
     id: '214',
@@ -3452,7 +3452,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹650',
-    images: ['Multi-functional electrical switchboard with sockets and switches']
+    images: [`Multi-functional electrical switchboard with sockets and switches`]
   },
   {
     id: '215',
@@ -3468,7 +3468,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹300',
-    images: ['White modular switchboard with socket and switches']
+    images: [`White modular switchboard with socket and switches`]
   },
   {
     id: '216',
@@ -3484,7 +3484,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White and blue bulb holder for lighting']
+    images: [`White and blue bulb holder for lighting`]
   },
   {
     id: '217',
@@ -3500,7 +3500,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['White switchboard with switches, sockets, and bulb holder']
+    images: [`White switchboard with switches, sockets, and bulb holder`]
   },
   {
     id: '218',
@@ -3516,7 +3516,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['White socket and switch combination on board']
+    images: [`White socket and switch combination on board`]
   },
   {
     id: '219',
@@ -3532,7 +3532,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹600',
-    images: ['Multiple switchboards with sockets and switches']
+    images: [`Multiple switchboards with sockets and switches`]
   },
   {
     id: '220',
@@ -3548,7 +3548,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹80',
-    images: ['White bulb holder with wires attached']
+    images: [`White bulb holder with wires attached`]
   },
   {
     id: '221',
@@ -3564,7 +3564,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹500',
-    images: ['Screwdrivers and wire stripper for electrical work']
+    images: [`Screwdrivers and wire stripper for electrical work`]
   },
   {
     id: '222',
@@ -3580,7 +3580,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1500',
-    images: ['6.0 SQ MM x 2 CORE TWIN 1100 U']
+    images: [`6.0 SQ MM x 2 CORE TWIN 1100 U`]
   },
   {
     id: '223',
@@ -3596,7 +3596,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹1200',
-    images: ['Electrical wire for home and industrial use']
+    images: [`Electrical wire for home and industrial use`]
   },
   {
     id: '224',
@@ -3612,7 +3612,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹300',
-    images: ['Alarm to prevent water tank overflow']
+    images: [`Alarm to prevent water tank overflow`]
   },
   {
     id: '225',
@@ -3628,7 +3628,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹300',
-    images: ['Black multi-socket extension cord with switch']
+    images: [`Black multi-socket extension cord with switch`]
   },
   {
     id: '226',
@@ -3644,7 +3644,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹400',
-    images: ['White round extension board with multiple sockets']
+    images: [`White round extension board with multiple sockets`]
   },
   {
     id: '227',
@@ -3660,7 +3660,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['White switch board with two sockets and switches']
+    images: [`White switch board with two sockets and switches`]
   },
   {
     id: '228',
@@ -3676,7 +3676,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['White switch board with multiple switches and socket']
+    images: [`White switch board with multiple switches and socket`]
   },
   {
     id: '229',
@@ -3692,7 +3692,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['Pink extension cord reel with multiple outlets']
+    images: [`Pink extension cord reel with multiple outlets`]
   },
   {
     id: '230',
@@ -3708,7 +3708,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹400',
-    images: ['White switch board with sockets and switches']
+    images: [`White switch board with sockets and switches`]
   },
   {
     id: '231',
@@ -3724,7 +3724,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹700',
-    images: ['White switch board with multiple sockets and switches']
+    images: [`White switch board with multiple sockets and switches`]
   },
   {
     id: '232',
@@ -3740,7 +3740,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹500',
-    images: ['White switch board with sockets and switches']
+    images: [`White switch board with sockets and switches`]
   },
   {
     id: '233',
@@ -3756,7 +3756,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['White extension board with one socket and switch']
+    images: [`White extension board with one socket and switch`]
   },
   {
     id: '234',
@@ -3772,7 +3772,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['Extension board with two sockets and one switch']
+    images: [`Extension board with two sockets and one switch`]
   },
   {
     id: '235',
@@ -3788,7 +3788,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['White extension board with one socket and switch']
+    images: [`White extension board with one socket and switch`]
   },
   {
     id: '236',
@@ -3804,7 +3804,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹400',
-    images: ['Extension board with socket, switches, bulb holder']
+    images: [`Extension board with socket, switches, bulb holder`]
   },
   {
     id: '237',
@@ -3820,7 +3820,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White switch board with socket and switches']
+    images: [`White switch board with socket and switches`]
   },
   {
     id: '238',
@@ -3836,7 +3836,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Backside of a white switch board']
+    images: [`Backside of a white switch board`]
   },
   {
     id: '239',
@@ -3852,7 +3852,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Double combined switch board in box']
+    images: [`Double combined switch board in box`]
   },
   {
     id: '240',
@@ -3868,7 +3868,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['White 3-pin electrical plug']
+    images: [`White 3-pin electrical plug`]
   },
   {
     id: '241',
@@ -3884,7 +3884,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹150',
-    images: ['Multi-purpose electrical plug adapter for Indian sockets']
+    images: [`Multi-purpose electrical plug adapter for Indian sockets`]
   },
   {
     id: '242',
@@ -3900,7 +3900,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['White socket with blue on/off switch']
+    images: [`White socket with blue on/off switch`]
   },
   {
     id: '243',
@@ -3916,7 +3916,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹200',
-    images: ['White socket with white on/off switch']
+    images: [`White socket with white on/off switch`]
   },
   {
     id: '244',
@@ -3932,7 +3932,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical shop with various products and staff']
+    images: [`Electrical shop with various products and staff`]
   },
   {
     id: '245',
@@ -3948,7 +3948,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹50',
-    images: ['Variety of colored electrical insulation tapes']
+    images: [`Variety of colored electrical insulation tapes`]
   },
   {
     id: '246',
@@ -3964,7 +3964,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹30',
-    images: ['White indicator switch with red light']
+    images: [`White indicator switch with red light`]
   },
   {
     id: '247',
@@ -3980,7 +3980,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹250',
-    images: ['White multi plug extension board with switch']
+    images: [`White multi plug extension board with switch`]
   },
   {
     id: '248',
@@ -3996,7 +3996,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹120',
-    images: ['Low energy, high intensity LED spot light']
+    images: [`Low energy, high intensity LED spot light`]
   },
   {
     id: '249',
@@ -4012,7 +4012,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['White extension board with two switches and sockets']
+    images: [`White extension board with two switches and sockets`]
   },
   {
     id: '250',
@@ -4028,7 +4028,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['White extension board with two switches and sockets']
+    images: [`White extension board with two switches and sockets`]
   },
   {
     id: '251',
@@ -4044,7 +4044,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Round LED panel light, 9W']
+    images: [`Round LED panel light, 9W`]
   },
   {
     id: '252',
@@ -4060,7 +4060,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: '₹350',
-    images: ['White extension board with two switches and sockets']
+    images: [`White extension board with two switches and sockets`]
   },
   {
     id: '253',
@@ -4076,7 +4076,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Electrical switchboard for mounting switches and sockets']
+    images: [`Electrical switchboard for mounting switches and sockets`]
   },
   {
     id: '254',
@@ -4092,7 +4092,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Small 0.5W LED bulbs in various colors']
+    images: [`Small 0.5W LED bulbs in various colors`]
   },
   {
     id: '255',
@@ -4108,7 +4108,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Orange colored electrical extension cord with multiple outlets']
+    images: [`Orange colored electrical extension cord with multiple outlets`]
   },
   {
     id: '256',
@@ -4124,7 +4124,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Black and white immersion blender with box']
+    images: [`Black and white immersion blender with box`]
   },
   {
     id: '257',
@@ -4140,7 +4140,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviewCount: 10,
     description: 'Unavailable',
-    images: ['Immersion blender with box']
+    images: [`Immersion blender with box`]
   }
 ];
 
