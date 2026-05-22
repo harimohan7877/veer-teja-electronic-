@@ -29,7 +29,9 @@ export const SERVICES = [
   { id: '12', name: 'Mixer/Grinder Repair', nameHi: 'मिक्सर/चक्की मरम्मत', slug: 'mixer-repair', price: 249, duration: 'Same Day', icon: '🌀', description: 'Mixer, grinder & chakki motor repair.', descriptionHi: 'मिक्सर, ग्राइंडर और चक्की मोटर मरम्मत।', imageUrl: 'https://iili.io/C9emzuf.jpg' },
 ];
 
-export const PRODUCTS = [
+import { Product } from '../types';
+
+export const PRODUCTS: Product[] = [
   {
     id: '1',
     name: '',
