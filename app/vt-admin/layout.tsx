@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { LayoutDashboard, Package, Wrench, Calendar, MessageSquare, Image, Settings, LogOut, Menu, X } from 'lucide-react';
 
@@ -17,11 +17,18 @@ const adminNav = [
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
+  const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [adminEmail, setAdminEmail] = useState('');
 
   useEffect(() => {
+    // If we are on the login page or categorizer, we don't need to check session here
+    if (pathname === '/vt-admin/login' || pathname === '/vt-admin/categorizer') {
+      setIsAuthorized(true);
+      return;
+    }
+
     const session = localStorage.getItem('adminSession');
     if (!session) {
       router.push('/vt-admin/login');
@@ -29,7 +36,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       setIsAuthorized(true);
       setAdminEmail(localStorage.getItem('adminEmail') || 'admin@veerteja.com');
     }
-  }, [router]);
+  }, [router, pathname]);
 
   const handleLogout = () => {
     localStorage.removeItem('adminSession');
@@ -46,6 +53,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </div>
       </div>
     );
+  }
+
+  // If on login page, just return children without the sidebar wrapper
+  if (pathname === '/vt-admin/login' || pathname === '/vt-admin/categorizer') {
+    return <>{children}</>;
   }
 
   return (
