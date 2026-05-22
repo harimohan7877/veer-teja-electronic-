@@ -4193,20 +4193,12 @@ export const BRANDS = [
 ];
 
 export const CONTACTS = {
-  mesh: {
-    name: 'मेश सारण',
-    nameEn: 'Mesh Saran',
-    role: 'Electrician',
-    area: 'जयसंगसर वाले',
-    phones: ['9928330252', '6350211515'],
-    whatsapp: '919928330252',
-  },
   pappuram: {
     name: 'पप्पूराम सारण',
     nameEn: 'Pappuram Saran',
     role: 'Shop Owner',
-    area: 'गोमटिया वाले',
-    phones: ['6350211515', '6350211515'],
+    area: 'वीर तेजा इलेक्ट्रॉनिक्स',
+    phones: ['6350211515', '9928330252'],
     whatsapp: '916350211515',
   },
 };

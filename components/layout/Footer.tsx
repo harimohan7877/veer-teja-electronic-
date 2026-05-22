@@ -86,24 +86,6 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/40 mb-8">Support Hub</h4>
             <div className="space-y-4">
-              {/* Mesh Saran */}
-              <div className="p-4 bg-white/5 rounded-2xl border border-white/5 hover:border-secondary/20 transition-all group">
-                <p className="font-bold text-accent hindi-text text-lg mb-1">{CONTACTS.mesh.name}</p>
-                <p className="text-[11px] text-white/40 font-bold uppercase tracking-wider mb-3">
-                  {CONTACTS.mesh.role} • {CONTACTS.mesh.area}
-                </p>
-                <div className="flex flex-col gap-2">
-                  {CONTACTS.mesh.phones.map((phone) => (
-                    <a
-                      key={phone}
-                      href={`tel:${phone}`}
-                      className="text-sm text-white/70 hover:text-white flex items-center gap-2 transition-colors font-semibold"
-                    >
-                      <Phone className="w-3.5 h-3.5 text-secondary" /> {phone}
-                    </a>
-                  ))}
-                </div>
-              </div>
               {/* Pappuram Saran */}
               <div className="p-4 bg-white/5 rounded-2xl border border-white/5 hover:border-secondary/20 transition-all group">
                 <p className="font-bold text-accent hindi-text text-lg mb-1">{CONTACTS.pappuram.name}</p>
